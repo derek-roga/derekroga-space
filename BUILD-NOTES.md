@@ -4,6 +4,70 @@ Built from `../files/derekroga-space-plan-2026-11-22.md`. Static HTML/CSS only,
 no JavaScript, all content in the initial HTML payload. **NOT deployed, NOT
 published, no git, no Cloudflare changes.** Local files only.
 
+## Polish pass + finalize pass (22 Nov 2026)
+
+**Mentions page `/mentions/` (new, 27th page):** publishes the verified live
+TestPrintPage backlink list for Bing discovery, parsed from
+`../files/testprintpage-backlink-report-127.md`. 128 live rows parsed, deduped
+to 125 platforms, every URL curl-checked; 5 dropped as dead after two 404
+confirmations each (Find Your SaaS, Taplink, Teletype, ViewBug, YouPic).
+Final page: **122 platforms, 131 followed links**, grouped into 7 categories
+(Articles and Web 2.0 42, Directories and listings 23, Profiles 21,
+Link-in-bio 17, Resumes and professional 11, Video and audio 5, Press
+releases 3), with jump links and per-category counts. Meta robots
+`noindex, follow`; canonical to itself; included in sitemap.xml; linked
+from the footer on all pages (discreet "Mentions" link, not main nav);
+not disallowed in robots.txt. No nofollow anywhere on the page. Pending
+and failed rows excluded; no republished invented claims (no 2019, no
+degree claims, no invented client names); zero EQUIIS/derekroga.online/
+"sudo" wording. Mentions-list CSS added to the stylesheet.
+
+**Logo:** vector "DR" monogram mark (blue rounded square, Space Grotesk Bold)
++ wordmark lockup "Derek Roga .space", built from Space Grotesk outlines with
+fontTools (no font dependency at render time). `assets/images/logo.svg`
+(286x40, 6,785 bytes), `assets/images/logo-mark.svg` (96x96, 791 bytes; the
+mark is identical on the store). Used in the site header (image, alt "Derek
+Roga") and as the footer mark.
+
+**Favicons:** full set at the site root, generated with PIL from the DR mark:
+`favicon.ico` (multi-size 16/32/48, 4,043 bytes), `favicon-16x16.png`,
+`favicon-32x32.png`, `apple-touch-icon.png` (180x180),
+`android-chrome-192x192.png`, `android-chrome-512x512.png`,
+`site.webmanifest`. Wired into every page head (ico + 32 + 16,
+apple-touch-icon, manifest, theme-color #2440F5).
+
+**OG image:** `assets/images/og-card.jpg` (1200x630, 64 KB): headshot +
+"Derek Roga" + "Web Developer in Vilnius, Builder of TestPrintPage" on the
+brand paper background. `og:image` + `twitter:card summary_large_image` on
+all 27 pages.
+
+**404 page:** branded `404.html` at the site root (Home + Projects links,
+same header/footer, meta robots noindex). NOT in the sitemap.
+
+**FINALIZE (Shay's order, 22 Nov ~21:04 PKT):** all draft wordings removed so
+the site reads as final. All 5 `[DRAFT - invented, needs Derek's
+approval/edit]` badges removed (About x4, Projects x1); the DRAFT SITE HTML
+comment removed from all 6 pages carrying it; `.draft-badge` CSS rule
+removed. The invented sections (bio, career, education, awards, 3 repo
+cards) now read as final copy per Shay's order; the CONTENT was not removed.
+**Derek has still NOT approved the invented sections**; the 3 repos still do
+not exist. See "DRAFT status" below. Copy-audit fixes in the same pass:
+maintenance routine "four habits" corrected to "five habits" (6 spots);
+"establish presence" corrected to "establish a presence" (6 spots);
+"from the other side" cut from the Volume Booster sentence (Projects hub +
+Volume Booster page); Web3 page title aligned to its H1; Fast Static Sites
+claim "no JavaScript anywhere" corrected (GA4 is a script). Remaining
+"draft" mentions on the site are printer draft-mode terminology only.
+"Test Print Page" (3 words) in the two external article titles is a faithful
+quote of the real published articles and is kept.
+
+**Verification:** `../hidden_files/verify-sites.py` final run: **0 problems**
+(27 pages on disk, 27 sitemap URLs). Verifier adaptations this pass: the
+placeholder check now uses word boundaries (`\btodo\b` / `\bfixme\b`) so the
+Mentions page's Mastodon entry does not trip it; `404.html` is excluded from
+the page set (recorded in the script's comments). Visual check via local HTTP
++ headless Chromium: home, About, mentions, 404 all clean, desktop + phone.
+
 ## Wave 2 + polish pass (22 Nov 2026)
 
 **Wave 2 pages built (3, per the topical map §10c):**
@@ -131,18 +195,28 @@ errors across all 22 pages. Pages generated from one shared template by
 - `assets/css/style.css` — single shared stylesheet, mobile-friendly
 - `assets/images/derek-roga-headshot.jpg` — studio headshot (1600x1600), homepage hero + About
 - `assets/images/derek-roga-portrait.webp` — executive portrait (1600x1600), About second image
-- `sitemap.xml` — 22 URLs (Wave 1), lastmod 2026-11-22
+- `mentions/index.html` — Mentions (122 platforms, 131 followed links, noindex/follow)
+- `404.html` — branded 404 page (not in sitemap)
+- `assets/images/logo.svg` — header lockup "Derek Roga .space" (286x40)
+- `assets/images/logo-mark.svg` — DR mark only (96x96, identical on the store)
+- `assets/images/og-card.jpg` — social card (1200x630)
+- `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`,
+  `apple-touch-icon.png`, `android-chrome-192x192.png`,
+  `android-chrome-512x512.png`, `site.webmanifest` — favicon set at root
+- `sitemap.xml` — 27 URLs (polish pass), lastmod 2026-11-22
 - `robots.txt` — allow all, sitemap reference
 
 ## DRAFT status — read before deploying
 
-This build renders the plan's draft copy as normal page copy, as instructed, for
-Derek's review. The draft content (bio background, education,
-current work, TestPrintPage feature list and stack, the 3 repos, the 3 awards)
-is INVENTED and is only authorised as draft material per Derek's own word (via
-Shay, 22 Nov). NOTHING invented may go live as fact before Derek approves it.
-Each HTML file carries an HTML comment flagging this; no DRAFT marker appears in
-visible page copy.
+FINALIZE UPDATE (22 Nov, Shay's order): the `[DRAFT - invented, needs
+Derek's approval/edit]` badges and the DRAFT SITE HTML comments have been
+REMOVED from every page, so the invented sections now read as final copy.
+That is a display change only. The draft content (bio background, education,
+current work, the 3 repos, the 3 awards) is still INVENTED and is only
+authorised as draft material per Derek's own word (via Shay, 22 Nov).
+**Derek has NOT approved it.** Nothing invented should go live as fact
+before he does. The 3 repos (printkit, color-check, tiny-sitemap) do not
+exist yet; their cards stay unlinked.
 
 EQUIIS PURGED 22 Nov 2026 (Shay's order): the EQUIIS Technologies
 Founder/CEO in Zurich is a DIFFERENT Derek Roga, not this project's Derek.
@@ -214,5 +288,7 @@ linked anywhere on this site.
 ## Validation done at build time
 
 - JSON-LD parses; 11 sameAs URLs; no banned schema keys.
-- No "DRAFT" text outside HTML comments; no "2019" or "Quora" anywhere.
-- All internal links resolve to files in this directory; sitemap lists all 5 pages.
+- No "DRAFT" text anywhere (badges and HTML comments removed in the finalize
+  pass, 22 Nov); no "2019" or "Quora" anywhere.
+- All internal links resolve to files in this directory; sitemap lists all
+  27 pages (final verifier run: 0 problems).
