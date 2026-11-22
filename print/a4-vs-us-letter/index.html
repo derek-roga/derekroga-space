@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- derekroga.space — Wave 1 build, 22 Nov 2026. Static HTML/CSS, no JavaScript. -->
+  <title>A4 vs US Letter — Paper Sizes and Why Prints Go Wrong</title>
+  <meta name="description" content="A4 vs US Letter: A4 is 210 by 297mm, US Letter is 8.5 by 11 inches. Why the size mismatch scales and crops prints, and how to fix it.">
+  <link rel="canonical" href="https://derekroga.space/print/a4-vs-us-letter/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="A4 vs US Letter — Paper Sizes and Why Prints Go Wrong">
+  <meta property="og:description" content="A4 vs US Letter: A4 is 210 by 297mm, US Letter is 8.5 by 11 inches. Why the size mismatch scales and crops prints, and how to fix it.">
+  <meta property="og:url" content="https://derekroga.space/print/a4-vs-us-letter/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S52G28149');
+  </script>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../../index.html">Derek Roga<span class="tld">.space</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/index.html">About</a></li>
+          <li><a href="../../projects/index.html">Projects</a></li>
+          <li><a href="../index.html" aria-current="page">Print</a></li>
+          <li><a href="../../writing/index.html">Writing</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Print</a> &rsaquo; <span aria-current="page">A4 vs US Letter</span>
+  </nav>
+  <main>
+    <div class="wrap-narrow">
+      <section aria-label="Introduction">
+        <p class="kicker">Printer help</p>
+      <h1>A4 vs US Letter</h1>
+        <p class="lede">Two paper sizes, a few millimetres apart, and the cause of half the printing problems in the world. A4 is 210 by 297 millimetres. US Letter is 8.5 by 11 inches. Here is why the difference matters, and how to fix it when prints come out wrong.</p>
+      </section>
+      <section aria-label="The sizes">
+        <h2>The sizes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Size</th><th>Millimetres</th><th>Inches</th><th>Where it is standard</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>A4</strong></td><td>210 &times; 297</td><td>8.27 &times; 11.69</td><td>Most of the world, including Europe, Asia, Africa and Australia</td></tr>
+              <tr><td><strong>US Letter</strong></td><td>216 &times; 279</td><td>8.5 &times; 11</td><td>United States, Canada, Mexico and parts of South America</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The two sizes are close but not the same, and the difference runs in both directions at once. US Letter is wider than A4 by 6 millimetres, and shorter by 18 millimetres. A4 is taller and narrower. Letter is shorter and wider. Neither fits inside the other, which is exactly why the mismatch causes trouble: a page designed for one size cannot be printed on the other without scaling or cropping.</p>
+        <p>A4 comes from the ISO 216 standard, where each size is half the previous one, so A4 is half of A3 and twice A5, and the aspect ratio stays the same at every size. US Letter comes from a different tradition, and its aspect ratio is different. That is why the two sizes are not just different lengths: they are different shapes. A document laid out for one will never sit cleanly on the other.</p>
+        <figure class="diagram" aria-label="Diagram comparing A4 and US Letter sizes">
+          <svg viewBox="0 0 520 260" role="img" aria-labelledby="paper-title paper-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="paper-title">A4 and US Letter compared</title>
+            <desc id="paper-desc">Two overlapping rectangles: A4 is taller and narrower, US Letter is shorter and wider.</desc>
+            <g font-family="monospace" font-size="12" fill="#111318">
+              <rect x="120" y="20" width="190" height="220" rx="4" fill="#E9ECFF" stroke="#2440F5" stroke-width="2"/>
+              <rect x="100" y="30" width="220" height="190" rx="4" fill="none" stroke="#B91C1C" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="310" y="130" fill="#2440F5">A4</text>
+              <text x="310" y="148" fill="#2440F5">210 x 297 mm</text>
+              <text x="100" y="245" fill="#B91C1C">US Letter: 8.5 x 11 in (216 x 279 mm)</text>
+            </g>
+          </svg>
+          <figcaption>Illustration: A4 is taller and narrower; US Letter is shorter and wider. Neither fits inside the other.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-label="Why it matters">
+        <h2>Why it matters</h2>
+        <p>When the paper size in the document does not match the paper in the tray, the print dialog has to do something, and none of its options are good. "Fit to page" scales the document down to fit, which makes everything smaller and moves the margins. "Shrink to fit" does the same. Printing at 100 percent without scaling crops the document, cutting off the bottom or the sides. And if the dialog guesses wrong about which size you have, it can do both at once.</p>
+        <p>For an ordinary letter, the result is a slightly small print or a cut-off footer, annoying but readable. For a test page, it is fatal. A test page is a measuring instrument: its lines, grids and colour blocks are placed at exact positions, and scaling moves them. A scaled alignment grid cannot tell you whether the head is aligned, because the grid itself is in the wrong place. A scaled colour sheet cannot be trusted for banding, because scaling introduces its own artefacts. That is why every guide on this site says the same thing: print test pages at 100 percent, on the paper size the sheet was made for.</p>
+        <p>The mismatch also causes everyday annoyance beyond test pages. A CV designed on A4, printed on Letter, comes out with the bottom cut off or the whole layout shrunk. A form designed on Letter, printed on A4, leaves a blank band at the bottom and a cramped top. A PDF that looks perfect on screen prints wrong because the screen does not care about paper size and the printer does.</p>
+      </section>
+
+      <section aria-label="The fix">
+        <h2>The fix</h2>
+        <p>Fixing a size mismatch takes thirty seconds, once you know where the setting lives. There are two places to check: the print dialog, and the document itself.</p>
+        <ol class="steps">
+          <li><strong>Check the paper in the tray.</strong> Look at the paper itself. A4 and Letter look similar at a glance, so check the packaging or measure it: A4 is 210mm wide, Letter is 216mm wide. Load the tray with the size you intend to use.</li>
+          <li><strong>Set the size in the print dialog.</strong> In the print dialog, find the paper size setting and set it to match the paper in the tray. Do this every time you print something that matters: the dialog remembers the last size used, which may not be the size you have now.</li>
+          <li><strong>Set the size in the document.</strong> If you are printing from a PDF, the PDF itself has a page size. A PDF made for A4, printed on Letter paper, will still mismatch even if the dialog is set right, because the document is the wrong size. Open the PDF, check its page size, and if it does not match your paper, either print the version made for your size, or accept the scaling and know that the output is scaled.</li>
+          <li><strong>Print at 100 percent.</strong> Set scaling to 100 percent or "Actual size". Do not use "Fit to page" for a test page. If the print dialog warns that the document is larger than the paper, that warning is telling you the sizes do not match: fix the size, do not scale around it.</li>
+        </ol>
+      </section>
+
+      <section aria-label="How TestPrintPage handles it">
+        <h2>How TestPrintPage handles it</h2>
+        <p>Every TestPrintPage sheet is available as an exact-size PDF in both A4 and US Letter. Pick the size that matches the paper in your tray, print at 100 percent, and the sheet is accurate. There is no scaling, no cropping, and no guessing: the sheet is the size it claims to be. That is the whole point of offering both sizes rather than one. A test page that has to be scaled to fit is not a test page.</p>
+      </section>
+
+      <section aria-label="Further reading">
+        <h2>Further reading</h2>
+        <p>Derek wrote about the geometry problem behind all of this in <a href="https://derekroga.hashnode.dev/a4-vs-us-letter-the-geometry-problem-hiding-in-every-print-tool">A4 vs US Letter: the geometry problem hiding in every print tool</a> on Hashnode. That essay is the story of why the two sizes break print layouts; this page is the reference and the fix. The practical steps for printing a test page at the right size are in <a href="../how-to-print-a-test-page/index.html">how to print a test page</a>.</p>
+      </section>
+      <section class="related" aria-label="Related pages">
+        <h2>Related pages</h2>
+        <ul class="plain">
+        <li><a href="../how-to-print-a-test-page/index.html">How to print a test page</a></li>
+        <li><a href="../../projects/testprintpage/index.html">TestPrintPage</a></li>
+        <li><a href="../../writing/print-css/index.html">Print CSS</a></li>
+        <li><a href="../index.html">Printer help hub</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="wordmark">Derek Roga</p>
+          <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../projects/index.html">Projects</a></li>
+            <li><a href="../index.html">Printer help</a></li>
+            <li><a href="../../writing/index.html">Writing</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../privacy/index.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/derek-roga">GitHub</a></li>
+            <li><a href="https://dev.to/derekroga">Dev.to</a></li>
+            <li><a href="https://hashnode.com/@derekroga">Hashnode</a></li>
+            <li><a href="https://x.com/derekroga">X</a></li>
+            <li><a href="https://bsky.app/profile/derekroga01.bsky.social">Bluesky</a></li>
+            <li><a href="https://testprintpage.net">TestPrintPage</a></li>
+            <li><a href="https://derekroga.store">derekroga.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Derek Roga &middot; Vilnius, Lithuania</p>
+        <p>Built with plain HTML and CSS. Analytics by Google Analytics 4.</p>
+        <p><a href="#top">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

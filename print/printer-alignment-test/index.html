@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- derekroga.space — Wave 1 build, 22 Nov 2026. Static HTML/CSS, no JavaScript. -->
+  <title>Printer Alignment Test — Fix Blurry and Offset Prints</title>
+  <meta name="description" content="A printer alignment test shows whether the print head is out of line. Print the Alignment sheet, read it, and run your printer's alignment utility.">
+  <link rel="canonical" href="https://derekroga.space/print/printer-alignment-test/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Printer Alignment Test — Fix Blurry and Offset Prints">
+  <meta property="og:description" content="A printer alignment test shows whether the print head is out of line. Print the Alignment sheet, read it, and run your printer's alignment utility.">
+  <meta property="og:url" content="https://derekroga.space/print/printer-alignment-test/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S52G28149');
+  </script>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../../index.html">Derek Roga<span class="tld">.space</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/index.html">About</a></li>
+          <li><a href="../../projects/index.html">Projects</a></li>
+          <li><a href="../index.html" aria-current="page">Print</a></li>
+          <li><a href="../../writing/index.html">Writing</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Print</a> &rsaquo; <span aria-current="page">Printer Alignment Test</span>
+  </nav>
+  <main>
+    <div class="wrap-narrow">
+      <section aria-label="Introduction">
+        <p class="kicker">Printer help</p>
+      <h1>Printer Alignment Test</h1>
+        <p class="lede">Blurry text, doubled letters, or lines that print offset from where they should be. An alignment test sheet shows whether the print head is out of line, and the alignment utility fixes it.</p>
+      </section>
+      <section aria-label="Signs of misalignment">
+        <h2>Signs of misalignment</h2>
+        <p>Print-head alignment is about position. The print head moves across the page laying down ink, and if its position is slightly off, everything it prints is slightly off too. The signs are distinctive once you know them.</p>
+        <ul class="features">
+          <li><strong>Blurry or soft text.</strong> Letters look out of focus, especially at small sizes. The edges are not crisp, and reading feels like work.</li>
+          <li><strong>Doubled text or lines.</strong> Each letter or line has a faint shadow beside it, as if the printer printed everything twice, slightly offset. This is the classic alignment symptom.</li>
+          <li><strong>Offset lines.</strong> Horizontal rules do not meet vertical rules cleanly. Table borders look stepped. Lines that should be straight have a jog in them.</li>
+          <li><strong>Colour fringes.</strong> Black text has a coloured edge, usually cyan or magenta, because the colour heads and the black head are not landing in the same place.</li>
+        </ul>
+        <p>Misalignment usually appears after a cartridge change, after the printer has been moved, or after a paper jam that knocked the head mechanism. It can also appear gradually as the printer ages. It is one of the most fixable printer faults: the printer has a built-in alignment utility whose only job is to correct it.</p>
+      </section>
+
+      <section aria-label="How to print an alignment sheet">
+        <h2>How to print an alignment sheet</h2>
+        <p>Print the Alignment sheet from <a href="https://testprintpage.net">TestPrintPage</a>, free, no sign-up. Pick the paper size that matches the paper in your tray, A4 or US Letter, and print at 100 percent with no scaling. The sheet is a set of fine lines, grids and small text blocks designed so that any offset shows up immediately.</p>
+        <figure class="diagram" aria-label="Diagram of aligned and misaligned print">
+          <svg viewBox="0 0 520 180" role="img" aria-labelledby="align-title align-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="align-title">Aligned and misaligned print</title>
+            <desc id="align-desc">Two sketches: on the left, straight lines and crisp text labelled aligned; on the right, doubled offset lines labelled misaligned.</desc>
+            <g font-family="monospace" font-size="12" fill="#111318">
+              <rect x="10" y="10" width="240" height="160" rx="8" fill="#FFFFFF" stroke="#D2D1C8"/>
+              <line x1="30" y1="40" x2="230" y2="40" stroke="#111318" stroke-width="2"/>
+              <line x1="30" y1="65" x2="230" y2="65" stroke="#111318" stroke-width="1"/>
+              <line x1="30" y1="90" x2="230" y2="90" stroke="#111318" stroke-width="1"/>
+              <text x="30" y="125">Sharp text, single lines</text>
+              <text x="30" y="150" fill="#157347">Aligned</text>
+              <rect x="270" y="10" width="240" height="160" rx="8" fill="#FFFFFF" stroke="#D2D1C8"/>
+              <line x1="290" y1="40" x2="490" y2="40" stroke="#111318" stroke-width="2"/>
+              <line x1="294" y1="44" x2="494" y2="44" stroke="#8A919C" stroke-width="1"/>
+              <line x1="290" y1="65" x2="490" y2="65" stroke="#111318" stroke-width="1"/>
+              <line x1="294" y1="69" x2="494" y2="69" stroke="#8A919C" stroke-width="1"/>
+              <line x1="290" y1="90" x2="490" y2="90" stroke="#111318" stroke-width="1"/>
+              <line x1="294" y1="94" x2="494" y2="94" stroke="#8A919C" stroke-width="1"/>
+              <text x="290" y="125">Doubled lines, soft text</text>
+              <text x="290" y="150" fill="#B91C1C">Misaligned</text>
+            </g>
+          </svg>
+          <figcaption>Illustration: aligned print has single, crisp lines. Misaligned print doubles them.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-label="How to read it">
+        <h2>How to read it</h2>
+        <p>Look at the fine lines first. On a healthy print, each line is single and sharp. On a misaligned print, lines are doubled, with a faint second line a fraction of a millimetre beside the first. The offset may be horizontal, vertical, or both. Check the small text blocks next: if the smallest text is unreadable while the larger text is fine, the misalignment is small but real, and the utility will correct it.</p>
+        <p>Check the colour fringes too. Print a line of black text and look at its edges closely. A thin cyan or magenta edge means the colour heads and the black head are landing in different places. That is also an alignment fault, and the same utility fixes it.</p>
+        <p>If the lines are single and sharp but the text is still fuzzy, the fault is probably not alignment. Check the paper type setting, because the wrong paper setting changes how ink soaks in, and check the print quality setting, because draft mode prints soft by design. The <a href="../black-and-white-test-page/index.html">black and white test page</a> guide covers the other causes of fuzzy text.</p>
+      </section>
+
+      <section aria-label="How to run the alignment utility">
+        <h2>How to run your printer's alignment utility</h2>
+        <p>Every inkjet printer has an alignment utility, and most laser printers have an equivalent calibration routine. The utility prints a test pattern, and either reads it automatically with a built-in sensor or asks you to pick the best-looking option from a set of numbered patterns. Either way, the process takes a few minutes and uses one sheet of paper.</p>
+        <ol class="steps">
+          <li><strong>Find the utility.</strong> Look in the printer's maintenance or tools menu, either on the printer's own screen or in the printer software on your computer. It is usually called "Align Print Head", "Print Head Alignment", "Alignment", or "Calibration". The exact location varies by brand and model, so your printer's manual or the manufacturer's support site for your model is the authority.</li>
+          <li><strong>Load plain white paper.</strong> The utility needs a clean sheet to print its pattern on. Use plain white A4 or Letter paper, not photo paper or coloured stock.</li>
+          <li><strong>Run it and follow the prompts.</strong> The printer will print a pattern. If it reads the pattern itself, wait for it to finish. If it asks you to choose, look at the numbered rows and pick the one where the lines are straightest and the blocks are most even. Answer honestly: picking the wrong row makes the alignment worse, not better.</li>
+          <li><strong>Print the Alignment sheet again.</strong> The second print is the proof. If the lines are single and the text is sharp, the alignment is fixed. If not, run the utility once more.</li>
+        </ol>
+        <div class="callout-plain">
+          <p><strong>One run is usually enough.</strong> If two runs of the alignment utility do not fix the problem, the fault is probably not alignment. A dirty encoder strip, the clear plastic strip the head uses to track its position, can cause the same symptoms, as can a failing print head. Clean the encoder strip gently with a soft, dry cloth if your manual shows you how, and if the problem persists, the head itself may need replacing.</p>
+        </div>
+      </section>
+
+      <section aria-label="If alignment does not fix it">
+        <h2>If alignment does not fix it</h2>
+        <p>When alignment is correct but prints still look wrong, the fault is elsewhere. Streaks and bands point at clogged nozzles or dirty rollers: see the <a href="../streaks-and-lines-on-prints/index.html">streaks and lines</a> guide. Faded output points at ink or toner: see <a href="../faded-prints/index.html">faded prints</a>. Text that is sharp in the middle of the page but soft at the edges can be a paper-feed problem, where the paper is not held flat as it passes under the head. In that case, check that the paper is loaded squarely and the guides are snug against the stack, not loose and not crushing it.</p>
+      </section>
+      <section class="related" aria-label="Related pages">
+        <h2>Related pages</h2>
+        <ul class="plain">
+        <li><a href="../streaks-and-lines-on-prints/index.html">Streaks and lines on prints</a></li>
+        <li><a href="../how-to-print-a-test-page/index.html">How to print a test page</a></li>
+        <li><a href="../../projects/testprintpage/index.html">TestPrintPage</a></li>
+        <li><a href="../index.html">Printer help hub</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="wordmark">Derek Roga</p>
+          <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../projects/index.html">Projects</a></li>
+            <li><a href="../index.html">Printer help</a></li>
+            <li><a href="../../writing/index.html">Writing</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../privacy/index.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/derek-roga">GitHub</a></li>
+            <li><a href="https://dev.to/derekroga">Dev.to</a></li>
+            <li><a href="https://hashnode.com/@derekroga">Hashnode</a></li>
+            <li><a href="https://x.com/derekroga">X</a></li>
+            <li><a href="https://bsky.app/profile/derekroga01.bsky.social">Bluesky</a></li>
+            <li><a href="https://testprintpage.net">TestPrintPage</a></li>
+            <li><a href="https://derekroga.store">derekroga.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Derek Roga &middot; Vilnius, Lithuania</p>
+        <p>Built with plain HTML and CSS. Analytics by Google Analytics 4.</p>
+        <p><a href="#top">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

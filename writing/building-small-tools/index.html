@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- derekroga.space — Wave 1 build, 22 Nov 2026. Static HTML/CSS, no JavaScript. -->
+  <title>Building Small Tools — One Job, Done Carefully</title>
+  <meta name="description" content="Building small tools: one job, done carefully, nothing bolted on. The rule behind TestPrintPage and Volume Booster, and what scope discipline costs and saves.">
+  <link rel="canonical" href="https://derekroga.space/writing/building-small-tools/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Building Small Tools — One Job, Done Carefully">
+  <meta property="og:description" content="Building small tools: one job, done carefully, nothing bolted on. The rule behind TestPrintPage and Volume Booster, and what scope discipline costs and saves.">
+  <meta property="og:url" content="https://derekroga.space/writing/building-small-tools/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S52G28149');
+  </script>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../../index.html">Derek Roga<span class="tld">.space</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/index.html">About</a></li>
+          <li><a href="../../projects/index.html">Projects</a></li>
+          <li><a href="../../print/index.html">Print</a></li>
+          <li><a href="../index.html" aria-current="page">Writing</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Writing</a> &rsaquo; <span aria-current="page">Building Small Tools</span>
+  </nav>
+  <main>
+    <div class="wrap-narrow">
+      <section aria-label="Introduction">
+        <p class="kicker">Writing</p>
+      <h1>Building Small Tools</h1>
+        <p class="lede">One job, done carefully, nothing bolted on. The rule behind TestPrintPage and Volume Booster, and what scope discipline costs and saves.</p>
+      </section>
+      <section aria-label="The rule">
+        <h2>The rule</h2>
+        <p>Every small tool starts with the same temptation: to do one more thing. The test-page tool could also manage your printer. The volume tool could also be a media player. The sitemap tool could also be an SEO suite. Each addition sounds reasonable on its own, and each one makes the tool a little worse at its job.</p>
+        <p>The rule that governs Derek's tools is the opposite: one job, done carefully, nothing bolted on. One job means the tool does one thing, and the whole tool is organised around that one thing. Done carefully means the one thing is done well, with attention to the details that make it trustworthy. Nothing bolted on means no second feature, no settings panel full of options nobody asked for, and no account standing between the user and the job.</p>
+        <p>The rule is easy to state and hard to keep. It is hard because saying no to a feature is harder than saying yes, especially when a user asks for it, or a competitor has it, or it would take only an afternoon to add. It is hard because a one-job tool always looks thin next to a suite that does twelve things badly. And it is hard because the rule has to survive every new idea, every request, and every moment of doubt about whether the tool is "enough".</p>
+      </section>
+
+      <section aria-label="TestPrintPage as example">
+        <h2>TestPrintPage as the example</h2>
+        <p><a href="../../projects/testprintpage/index.html">TestPrintPage</a> is the worked example. It prints test pages. That is the one job. Everything in it serves that job: five sheets, each matched to a symptom, as exact-size PDFs in A4 and US Letter, free, with no account and no email gate.</p>
+        <p>The five sheets are the rule applied to content. Each sheet answers one question. The Quick sheet answers "is the printer healthy". The Colour sheet answers "is the colour right". The Black and White sheet answers "is the mono output right". The CMYK sheet answers "which ink channel is failing". The Alignment sheet answers "is the head aligned". No sheet tries to answer two questions, and no question needs two sheets. If a sixth sheet were proposed, it would have to answer a question none of the five already answers, or it would not be built.</p>
+        <p>The exact-size PDFs are "done carefully". A test page that prints at the wrong size is not a test page, so the sheets are made in both A4 and US Letter, at exact size, and the guides on this site tell the reader to print at 100 percent. That care is invisible when it works, which is the point: a trustworthy tool does not draw attention to its trustworthiness. It just works.</p>
+        <p>And "nothing bolted on" is visible in what the tool does not do. It does not manage your printer. It does not sell ink. It does not track your printing history. It does not ask for an email address before giving you the file. Each of those would be a reasonable feature for a different product. None of them serves the job of printing a test page, so none of them is in the tool.</p>
+      </section>
+
+      <section aria-label="Volume Booster as example">
+        <h2>Volume Booster as the example</h2>
+        <p><a href="../../projects/volume-booster/index.html">Volume Booster</a> is the same rule applied to a second product. It is Derek's second product, built on the same principle: one job, done carefully, nothing bolted on. No features, dates or URLs have been published for it yet, and this page does not invent any. What can be said is that the rule is the same, and the discipline is the same. A second product built on the same rule is a test of whether the rule generalises, or whether it only worked once, for one tool, in one domain.</p>
+        <p>The interesting question for a second product is not "what does it do", but "what does it refuse to do". The refusals are where the rule lives. A volume tool that refuses to become a media player, a mixer, or an equaliser suite is a tool that trusts its one job to be enough. That trust is the whole philosophy.</p>
+      </section>
+
+      <section aria-label="What nothing bolted on costs and saves">
+        <h2>What "nothing bolted on" costs and saves</h2>
+        <p>Scope discipline costs something real. A one-job tool is harder to describe, because there is no long feature list to lean on. It is harder to market, because "it prints test pages" is a less exciting sentence than "it manages your entire printing workflow". It is harder to defend against feature requests, because every request sounds reasonable and every refusal sounds stubborn. And it is harder to grow, because growth has to come from doing the one job better, not from adding a second job.</p>
+        <p>But the saving is real too. A small tool stays maintainable by one person. There is no sprawling codebase to keep up with, no second feature whose bugs leak into the first, and no settings panel whose combinations have to be tested. A small tool stays fast, because there is nothing to slow it down. A small tool stays understandable, because a new user can see what it does in ten seconds. And a small tool stays honest, because it never promises more than it delivers.</p>
+        <p>The deepest saving is time. Every feature added is a feature that has to be maintained, documented, tested and supported, forever. A feature that takes an afternoon to add takes a year to maintain. The rule is not about minimalism for its own sake. It is about respecting the maintenance cost of every addition, and spending that cost only where it serves the one job.</p>
+        <figure>
+          <img class="portrait" src="../../assets/images/derek-roga-outdoor.jpg" alt="Derek Roga outdoors" width="320" height="320" loading="lazy">
+          <figcaption>Derek Roga. Small tools, built carefully, one job at a time.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-label="Building in public">
+        <h2>Building in public</h2>
+        <p>Writing about the work as you go is part of the same discipline. Derek's posts on <a href="https://dev.to/derekroga">Dev.to</a> and <a href="https://hashnode.com/@derekroga">Hashnode</a> explain the thinking behind TestPrintPage: why it starts from the symptom, why the sheets are exact-size PDFs, and what building a free tool taught him about gates, correctness and scope. The posts are indexed on the <a href="../index.html">writing page</a>, alongside the essays on this site.</p>
+        <p>Writing in public does two things. It forces the thinking to be clear, because a vague idea cannot survive being written down. And it gives the tool a record: not a marketing page, but a working account of why the tool is the way it is. When someone asks why TestPrintPage has five sheets and not fifteen, the answer is in the writing. When someone asks why there is no account, the answer is there too. The writing is the documentation of the decisions, and the decisions are the product.</p>
+        <p>The rule, in the end, is a bet: that a tool that does one job well, and says so plainly, will outlast a tool that does twelve jobs badly and says so loudly. TestPrintPage is the first test of that bet. Volume Booster is the second.</p>
+      </section>
+      <section class="related" aria-label="Related pages">
+        <h2>Related pages</h2>
+        <ul class="plain">
+        <li><a href="../../projects/testprintpage/index.html">TestPrintPage</a></li>
+        <li><a href="../../projects/volume-booster/index.html">Volume Booster</a></li>
+        <li><a href="../fast-static-sites/index.html">Fast Static Sites</a></li>
+        <li><a href="../index.html">Writing</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="wordmark">Derek Roga</p>
+          <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../projects/index.html">Projects</a></li>
+            <li><a href="../../print/index.html">Printer help</a></li>
+            <li><a href="../index.html">Writing</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../privacy/index.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/derek-roga">GitHub</a></li>
+            <li><a href="https://dev.to/derekroga">Dev.to</a></li>
+            <li><a href="https://hashnode.com/@derekroga">Hashnode</a></li>
+            <li><a href="https://x.com/derekroga">X</a></li>
+            <li><a href="https://bsky.app/profile/derekroga01.bsky.social">Bluesky</a></li>
+            <li><a href="https://testprintpage.net">TestPrintPage</a></li>
+            <li><a href="https://derekroga.store">derekroga.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Derek Roga &middot; Vilnius, Lithuania</p>
+        <p>Built with plain HTML and CSS. Analytics by Google Analytics 4.</p>
+        <p><a href="#top">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- derekroga.space — Wave 2 build, 22 Nov 2026. Static HTML/CSS, no JavaScript. -->
+  <title>Boost Volume Without Distortion — Gain, Clipping and Normalisation</title>
+  <meta name="description" content="Raising volume distorts when the signal clips. Learn gain staging, normalisation and compression, and when boosting cannot help a quiet recording.">
+  <link rel="canonical" href="https://derekroga.space/writing/boost-volume-without-distortion/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Boost Volume Without Distortion — Gain, Clipping and Normalisation">
+  <meta property="og:description" content="Raising volume distorts when the signal clips. Learn gain staging, normalisation and compression, and when boosting cannot help a quiet recording.">
+  <meta property="og:url" content="https://derekroga.space/writing/boost-volume-without-distortion/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S52G28149');
+  </script>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../../index.html">Derek Roga<span class="tld">.space</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/index.html">About</a></li>
+          <li><a href="../../projects/index.html">Projects</a></li>
+          <li><a href="../../print/index.html">Print</a></li>
+          <li><a href="../index.html" aria-current="page">Writing</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Writing</a> &rsaquo; <span aria-current="page">Boost Volume Without Distortion</span>
+  </nav>
+  <main>
+    <div class="wrap-narrow">
+      <section aria-label="Introduction">
+        <p class="kicker">Writing</p>
+      <h1>Boost Volume Without Distortion</h1>
+        <p class="lede">Volume is not a single knob. It is a chain of gains, and distortion appears when any link in the chain is pushed past its limit. Raise the quietest link first.</p>
+      </section>
+      <section aria-label="Why boosting distorts">
+        <h2>Why boosting distorts</h2>
+        <p>Every audio signal has a ceiling. In digital audio, that ceiling is the maximum value a sample can hold, and it is a hard limit, not a suggestion. When a signal is pushed past it, the peaks are chopped off flat. That is clipping, and it is the distortion you hear when volume is pushed too far: a harsh, crackling, buzzing edge on loud passages, as if the sound is being squeezed through a gap that is too small for it.</p>
+        <p>Clipping is easy to recognise once you have heard it, and it is worth hearing once deliberately so you know what to listen for. Play a loud recording, turn the volume up past comfortable, and listen to the loudest moments. The crackle on the peaks is clipping. It is not the speakers struggling, though speakers can distort too. It is the signal itself being cut off at the ceiling, and no amount of better speakers will fix a signal that is already clipped.</p>
+        <p>The important fact about clipping is that it is destructive. Once the peaks are chopped off, the information in them is gone, and turning the volume back down does not bring it back. A clipped recording stays clipped. That is why boosting has to be done carefully, in stages, with a listen at each step, rather than all at once. The goal is to raise the level to just below the ceiling, not through it.</p>
+        <p>There is a second, quieter form of distortion that comes from boosting: noise. Every recording has a noise floor, the faint hiss underneath the signal, from the microphone, the room, and the electronics. Boosting raises the noise floor by exactly the same amount as it raises the signal, so a recording boosted by twenty decibels is twenty decibels noisier. On a clean recording this does not matter. On a recording made in a noisy room, or on cheap hardware, it is the difference between listenable and unusable. Boosting cannot separate the signal from the noise. It raises both.</p>
+      </section>
+
+      <section aria-label="Gain staging">
+        <h2>Gain staging</h2>
+        <p>Gain staging is the practice of raising volume in the right place, in the right order, instead of pushing one control to its limit. The rule is simple: raise the quietest link first, and raise each link only as far as it needs to go.</p>
+        <ol class="steps">
+          <li><strong>Find the quietest link.</strong> Work through the chain from the companion post, <a href="../why-is-my-audio-so-quiet/index.html">Why Is My Audio So Quiet?</a>: source, app, browser tab, system, output device. The link sitting lowest is the one to raise first. Raising a link that is already near its ceiling does nothing except add distortion.</li>
+          <li><strong>Raise it in small steps.</strong> Bring the quietest link up in stages, listening after each one. Stop when the volume is comfortable, not when the slider reaches the end. A slider at seventy percent with clean sound beats a slider at one hundred percent with clipping.</li>
+          <li><strong>Move to the next quietest link.</strong> If the first link is now at a sensible level and the audio is still too quiet, raise the next link the same way. Two links each raised a little produce cleaner sound than one link pushed to its limit, because neither one is near its ceiling.</li>
+          <li><strong>Leave headroom.</strong> Headroom is the gap between the loudest peak and the ceiling, and it is what keeps a sudden loud moment from clipping. Aim to keep the peaks a little below the maximum, even if the average level could go higher. Music and speech both have peaks well above their average, and those peaks are the first thing to clip.</li>
+          <li><strong>Listen to the loudest part.</strong> Before calling the job done, play the loudest passage in the recording and listen for the crackle. If it clips there, back off the last link you raised until it is clean. A setting that is clean on a quiet passage and clipped on a loud one is not a setting. It is a setting that has not been tested yet.</li>
+        </ol>
+        <p>Gain staging feels slow the first time, because it is five small adjustments instead of one big one. It is faster than the alternative, which is pushing the volume up, hearing the distortion, turning it back down, and starting again without knowing which link caused the problem.</p>
+      </section>
+
+      <section aria-label="Normalisation and compression">
+        <h2>Normalisation and compression</h2>
+        <p>Two tools do most of the work of raising volume safely, and they do different jobs. Knowing which one you need is half the task.</p>
+        <h3>Normalisation</h3>
+        <p>Normalisation raises the whole recording by the same amount, until the loudest peak reaches a chosen level, usually just below the ceiling. It does not change the shape of the sound. Quiet parts stay quiet relative to loud parts, loud parts stay loud, and everything is simply louder. It is the right tool when a recording is uniformly too quiet and otherwise fine: a voice memo recorded at low level, a lecture captured too far from the microphone, a video with quiet dialogue throughout. One pass of normalisation, and the recording is at a sensible level with no distortion, because the peaks were measured first and the boost was calculated to fit under the ceiling.</p>
+        <h3>Compression</h3>
+        <p>Compression does something different: it reduces the gap between the quietest and loudest parts, bringing the quiet parts up and the loud parts down, so the whole recording sits in a narrower range. It is the right tool when the problem is not that the recording is quiet overall, but that the quiet parts are inaudible while the loud parts are fine: a conversation where one speaker whispers and the other shouts, a video where the dialogue is buried under the music, a recording with a wide dynamic range that cannot be heard in a noisy room. Compression makes the quiet parts hearable without making the loud parts painful.</p>
+        <p>The two tools are often used together: normalise first to bring the recording to a sensible level, then compress lightly if the quiet parts still disappear. The order matters, because compressing first and normalising second can push the compressed peaks into the ceiling. Used lightly, both are inaudible in the sense that nobody listening notices the processing, only that the recording is easier to hear. Used heavily, both are obvious: normalisation pushed too far clips, and compression pushed too far makes everything sound flat and lifeless, with no difference between a whisper and a shout. Light and careful beats heavy and fast, with both tools.</p>
+      </section>
+
+      <section aria-label="When boosting cannot help">
+        <h2>When boosting cannot help</h2>
+        <p>Boosting has limits, and knowing them saves time. There are three situations where no amount of careful boosting will produce a good result.</p>
+        <ul class="features">
+          <li><strong>The source is already clipped.</strong> If the recording was clipped when it was made, the peaks are already gone, and boosting only makes the clipping louder. The test is simple: turn the volume down. If the crackle on the loud passages is still there at low volume, the clipping is in the recording, not in your playback, and nothing downstream can fix it. The only fix is a better recording.</li>
+          <li><strong>The noise floor is too high.</strong> If the recording was made in a noisy room, on a noisy microphone, or next to a fan, boosting raises the noise along with the signal. Past a certain point the result is louder but less intelligible, because the noise fills the gaps between the words. Noise reduction software can help a little, at the cost of a slightly artificial sound, but it cannot recover a recording where the noise is as loud as the signal.</li>
+          <li><strong>The speaker or headphone is the limit.</strong> Small speakers distort at high volume regardless of how clean the signal is. A laptop speaker pushed to its limit will buzz and rattle, and no gain staging will fix a physical limit. If the audio is clean on headphones and distorted on the built-in speakers at the same level, the speakers are the bottleneck, and the fix is better output, not more gain.</li>
+        </ul>
+        <p>In all three cases, the honest answer is that the recording or the hardware sets the ceiling, not the volume control. Recognising that early is better than chasing the problem through every setting and concluding, wrongly, that the tools are at fault.</p>
+      </section>
+
+      <section aria-label="Safe listening">
+        <h2>A note on safe listening</h2>
+        <p>Boosting volume is worth doing carefully for your hearing as well as for the sound. Loud audio through headphones, sustained over hours, causes hearing damage that does not heal, and it happens gradually enough that it is easy to miss until it is done. Keep the volume at a level where you can still hear someone speaking to you in the same room. Take a break every hour if you are listening at length. And if you find yourself raising the volume over weeks to get the same sense of loudness, that is a sign to turn it down, not up. The goal of boosting is to hear the recording clearly, not to hear it loudly.</p>
+      </section>
+
+      <section aria-label="About this guide">
+        <h2>About this guide</h2>
+        <p>This is general audio advice, written from the same symptom-first approach as the printer guides on this site. It sits alongside Derek's second product, <a href="../../projects/volume-booster/index.html">Volume Booster</a>, which follows the same one-job rule as TestPrintPage. The guide makes no claims about that product. It is here because quiet audio is a common problem, and the difference between clean loud and distorted loud is worth understanding.</p>
+      </section>
+      <section class="related" aria-label="Related pages">
+        <h2>Related pages</h2>
+        <ul class="plain">
+        <li><a href="../why-is-my-audio-so-quiet/index.html">Why Is My Audio So Quiet?</a></li>
+        <li><a href="../../projects/volume-booster/index.html">Volume Booster</a></li>
+        <li><a href="../index.html">Writing</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="wordmark">Derek Roga</p>
+          <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../projects/index.html">Projects</a></li>
+            <li><a href="../../print/index.html">Printer help</a></li>
+            <li><a href="../index.html">Writing</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../privacy/index.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/derek-roga">GitHub</a></li>
+            <li><a href="https://dev.to/derekroga">Dev.to</a></li>
+            <li><a href="https://hashnode.com/@derekroga">Hashnode</a></li>
+            <li><a href="https://x.com/derekroga">X</a></li>
+            <li><a href="https://bsky.app/profile/derekroga01.bsky.social">Bluesky</a></li>
+            <li><a href="https://testprintpage.net">TestPrintPage</a></li>
+            <li><a href="https://derekroga.store">derekroga.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Derek Roga &middot; Vilnius, Lithuania</p>
+        <p>Built with plain HTML and CSS. Analytics by Google Analytics 4.</p>
+        <p><a href="#top">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

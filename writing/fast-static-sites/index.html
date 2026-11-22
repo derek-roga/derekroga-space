@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- derekroga.space — Wave 1 build, 22 Nov 2026. Static HTML/CSS, no JavaScript. -->
+  <title>Fast Static Sites — Why Content Should Be in the Payload</title>
+  <meta name="description" content="Fast static sites: why content should be in the HTML payload, not behind a JavaScript shell. Payload size, render-blocking scripts, and caching, with this site as the example.">
+  <link rel="canonical" href="https://derekroga.space/writing/fast-static-sites/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fast Static Sites — Why Content Should Be in the Payload">
+  <meta property="og:description" content="Fast static sites: why content should be in the HTML payload, not behind a JavaScript shell. Payload size, render-blocking scripts, and caching, with this site as the example.">
+  <meta property="og:url" content="https://derekroga.space/writing/fast-static-sites/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S52G28149');
+  </script>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../../index.html">Derek Roga<span class="tld">.space</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/index.html">About</a></li>
+          <li><a href="../../projects/index.html">Projects</a></li>
+          <li><a href="../../print/index.html">Print</a></li>
+          <li><a href="../index.html" aria-current="page">Writing</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Writing</a> &rsaquo; <span aria-current="page">Fast Static Sites</span>
+  </nav>
+  <main>
+    <div class="wrap-narrow">
+      <section aria-label="Introduction">
+        <p class="kicker">Writing</p>
+      <h1>Fast Static Sites</h1>
+        <p class="lede">Why content should be in the payload, not behind a JavaScript shell. What fast actually means for a small site, and why this site is built the way it is.</p>
+      </section>
+      <section aria-label="The problem">
+        <h2>The problem: shells that search engines and slow connections struggle with</h2>
+        <p>Open a modern website and watch what happens. The browser downloads an HTML file that is mostly empty: a shell, a few script tags, and a blank container. Then it downloads JavaScript, runs it, fetches data, and only then renders the content you came for. On a fast connection with a fast phone, that takes a second or two and nobody notices. On a slow connection, on an old phone, or in a search engine's crawler, it takes much longer, and sometimes it never finishes at all.</p>
+        <p>Search engines have got better at running JavaScript, but "better" is not "reliable". A crawler that has to execute scripts to see your content is a crawler that can time out, hit a script error, or give up and index the empty shell. Bing in particular has historically been less patient with JavaScript-rendered pages than Google. If the content is not in the initial HTML payload, you are betting your visibility on a crawler's willingness to run your code. That is a bad bet for a small site with no team to monitor it.</p>
+        <p>Slow connections have the same problem from the other side. A shell plus a framework plus data is three round trips before the first word appears. A static HTML page is one. On a phone in a rural area, on a train, or on a capped data plan, the difference between one round trip and three is the difference between reading the page and closing the tab.</p>
+      </section>
+
+      <section aria-label="The static answer">
+        <h2>The static answer</h2>
+        <p>A static site is the opposite approach. The content is in the HTML file, written out in full, when the server sends it. The browser renders it immediately, with no JavaScript required. One stylesheet handles the design. There is no backend, no database, no server-side rendering step, and nothing to time out.</p>
+        <p>This does not mean the site is primitive. A static site can have any layout, any typography, and any content a server-rendered site can have. What it cannot have is content that changes per visitor, or content that depends on a database query at request time. For a personal site, a product site, a documentation site, or a blog, that is rarely a real limitation. The content changes when the author changes it, not when a visitor arrives.</p>
+        <p>The trade-off is honest work. A static site means writing HTML, or generating it from a build step, instead of letting a framework assemble it at runtime. That work is visible and boring, which is why it is unfashionable. But it is work that pays off every time someone loads the page: the page is fast, it works without JavaScript, it works in every crawler, and it keeps working when the framework of the year is abandoned.</p>
+      </section>
+
+      <section aria-label="What fast actually means">
+        <h2>What "fast" actually means</h2>
+        <p>Fast is not one number. It is three things, and they matter in this order.</p>
+        <h3>Payload size</h3>
+        <p>How many bytes the browser has to download before it can show the page. A static HTML page with one stylesheet is tens of kilobytes. A framework shell with its JavaScript bundle is often hundreds of kilobytes before the content even arrives. Smaller payloads load faster on every connection, and they cost less data on capped plans.</p>
+        <h3>No render-blocking JavaScript</h3>
+        <p>Whether the browser can render the page before the JavaScript finishes. On a static site, there is no JavaScript to block rendering, so the content appears as soon as the HTML arrives. On a shell site, the content waits for the script, and the script waits for the data, and the data waits for the network.</p>
+        <h3>Cacheable</h3>
+        <p>Whether the page can be cached and served again without rebuilding it. A static file can be cached at every level: the browser, the CDN, the edge. A server-rendered page can be cached too, but only with care, and only if the caching layer knows when the content changed. A static file is cacheable by default, because it does not change until someone replaces it.</p>
+        <p>There are other measures, Largest Contentful Paint, Cumulative Layout Shift, Time to First Byte, and they all improve when the payload is small, the rendering is unblocked, and the caching is simple. The point is not to chase a score. The point is that a page that arrives as HTML, renders immediately, and caches cleanly is fast in every measure that matters, without any optimisation work.</p>
+      </section>
+
+      <section aria-label="This site as the worked example">
+        <h2>This site as the worked example</h2>
+        <p>This site is a static site. Every page is an HTML file with its content written out in full. One shared stylesheet handles the design. There is no JavaScript anywhere on the site, no framework, no build-time data fetching, and no server-side rendering. The navigation is plain links. The footer is plain HTML. The diagrams on the printer guides are inline SVG, part of the page, not fetched separately.</p>
+        <p>That is a deliberate choice, and it is the same choice behind the print guides. A test page has to be trustworthy, and a web page has to be readable. Both are served by putting the content in the payload and getting out of the way. The design system for this site, Space Grotesk for headings, Inter for body, JetBrains Mono for labels, warm paper background, one signal blue, is carried by a single stylesheet, and the whole site works if that stylesheet fails to load, because the HTML is readable on its own.</p>
+        <p>The result is a site that loads in one round trip, renders immediately, works in every crawler, and can be hosted anywhere that serves files. It is not impressive technology. It is the absence of technology, and that is the point.</p>
+      </section>
+
+      <section aria-label="When static is the wrong choice">
+        <h2>When static is the wrong choice</h2>
+        <p>Static is not always the answer, and it is worth saying when it is not. If the content changes per visitor, a logged-in dashboard, a personalised feed, a shopping cart, a static site cannot do it without a backend, and pretending otherwise means bolting on JavaScript until the static site is a shell site with extra steps. If the content updates many times a day from many authors, a static build step can become a bottleneck. If the site needs real-time data, a live feed or a collaborative editor, static files are the wrong tool.</p>
+        <p>The question is not "static or dynamic". The question is "does this content change per visitor or per minute". If the answer is no, static is the simplest thing that works, and the simplest thing that works is usually the fastest, the most reliable, and the easiest to maintain. For a personal hub, a product site, and a set of guides, the answer is no, and static is the right choice.</p>
+        <p>Related reading on this site: <a href="../print-css/index.html">Print CSS</a>, on making web pages print cleanly, and <a href="../building-small-tools/index.html">Building Small Tools</a>, on the one-job philosophy behind the products.</p>
+      </section>
+      <section class="related" aria-label="Related pages">
+        <h2>Related pages</h2>
+        <ul class="plain">
+        <li><a href="../print-css/index.html">Print CSS</a></li>
+        <li><a href="../../projects/testprintpage/index.html">TestPrintPage</a></li>
+        <li><a href="../index.html">Writing</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="wordmark">Derek Roga</p>
+          <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../projects/index.html">Projects</a></li>
+            <li><a href="../../print/index.html">Printer help</a></li>
+            <li><a href="../index.html">Writing</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../privacy/index.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/derek-roga">GitHub</a></li>
+            <li><a href="https://dev.to/derekroga">Dev.to</a></li>
+            <li><a href="https://hashnode.com/@derekroga">Hashnode</a></li>
+            <li><a href="https://x.com/derekroga">X</a></li>
+            <li><a href="https://bsky.app/profile/derekroga01.bsky.social">Bluesky</a></li>
+            <li><a href="https://testprintpage.net">TestPrintPage</a></li>
+            <li><a href="https://derekroga.store">derekroga.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Derek Roga &middot; Vilnius, Lithuania</p>
+        <p>Built with plain HTML and CSS. Analytics by Google Analytics 4.</p>
+        <p><a href="#top">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

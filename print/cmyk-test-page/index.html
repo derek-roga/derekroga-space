@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- derekroga.space — Wave 1 build, 22 Nov 2026. Static HTML/CSS, no JavaScript. -->
+  <title>CMYK Test Page — Find the Failing Ink Channel</title>
+  <meta name="description" content="A CMYK test page isolates cyan, magenta, yellow and black so you can find the failing ink channel. Print the sheet, read each bar, and fix the right cartridge.">
+  <link rel="canonical" href="https://derekroga.space/print/cmyk-test-page/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CMYK Test Page — Find the Failing Ink Channel">
+  <meta property="og:description" content="A CMYK test page isolates cyan, magenta, yellow and black so you can find the failing ink channel. Print the sheet, read each bar, and fix the right cartridge.">
+  <meta property="og:url" content="https://derekroga.space/print/cmyk-test-page/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0S52G28149');
+  </script>
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="../../index.html">Derek Roga<span class="tld">.space</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about/index.html">About</a></li>
+          <li><a href="../../projects/index.html">Projects</a></li>
+          <li><a href="../index.html" aria-current="page">Print</a></li>
+          <li><a href="../../writing/index.html">Writing</a></li>
+          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <nav class="breadcrumb wrap" aria-label="Breadcrumb">
+    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Print</a> &rsaquo; <span aria-current="page">CMYK Test Page</span>
+  </nav>
+  <main>
+    <div class="wrap-narrow">
+      <section aria-label="Introduction">
+        <p class="kicker">Printer help</p>
+      <h1>CMYK Test Page</h1>
+        <p class="lede">A CMYK test page isolates each ink channel, cyan, magenta, yellow and black, so you can name the failing channel instead of guessing at it.</p>
+      </section>
+      <section aria-label="What CMYK means">
+        <h2>What CMYK means</h2>
+        <p>CMYK is the four-ink model almost every colour printer uses. C is cyan, a greenish blue. M is magenta, a purplish red. Y is yellow. K is black, called "key" because it provides the detail and depth the other three cannot. Every colour your printer makes is a mixture of these four inks, laid down in tiny dots. A red is mostly magenta plus yellow. A green is cyan plus yellow. A deep blue is cyan plus magenta.</p>
+        <p>That mixing is why colour faults are confusing. When a photo prints with a green tint, the fault is not "green ink", because there is no green ink. The fault is one of the four channels: too much cyan and yellow, or too little magenta. The CMYK sheet removes the confusion by printing each channel on its own, so you can see each one separately.</p>
+      </section>
+
+      <section aria-label="How the sheet isolates each channel">
+        <h2>How the sheet isolates each channel</h2>
+        <p>The CMYK sheet has four bars, one per channel, each printed in pure cyan, pure magenta, pure yellow or pure black. Each bar steps from light to full strength, so you can see not just whether the channel prints, but how well it prints across its range. A healthy channel shows a smooth bar from pale to full. A failing channel shows gaps, bands, or nothing at all.</p>
+        <p>Because each bar uses only one ink, there is no mixing to hide behind. If the cyan bar is blank, the cyan channel is not printing. If the magenta bar is banded, the magenta nozzles are partly clogged. If the yellow bar is pale, the yellow cartridge is low. The sheet turns a vague symptom, "the colours look wrong", into a specific fact: "the cyan channel is failing."</p>
+        <figure class="diagram" aria-label="Diagram of a CMYK test sheet">
+          <svg viewBox="0 0 520 200" role="img" aria-labelledby="cmyk-title cmyk-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="cmyk-title">CMYK test sheet mock</title>
+            <desc id="cmyk-desc">An illustrated mock of a CMYK test page with four channel bars: cyan, magenta, yellow and black.</desc>
+            <g font-family="monospace" font-size="12" fill="#111318">
+              <rect x="10" y="10" width="500" height="180" rx="8" fill="#FFFFFF" stroke="#D2D1C8"/>
+              <text x="30" y="40">C</text><rect x="55" y="28" width="415" height="18" fill="#00AEEF"/>
+              <text x="30" y="72">M</text><rect x="55" y="60" width="415" height="18" fill="#EC008C"/>
+              <text x="30" y="104">Y</text><rect x="55" y="92" width="415" height="18" fill="#FFF200" stroke="#D2D1C8"/>
+              <text x="30" y="136">K</text><rect x="55" y="124" width="415" height="18" fill="#111318"/>
+              <text x="30" y="168">One bar per channel. A blank or banded bar names the failing ink.</text>
+            </g>
+          </svg>
+          <figcaption>Illustration: a CMYK sheet. Four bars, one per channel, each stepping from light to full strength.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-label="How to print one">
+        <h2>How to print one</h2>
+        <p>Print the CMYK sheet from <a href="https://testprintpage.net">TestPrintPage</a>, free, no sign-up. Pick the paper size that matches the paper in your tray, A4 or US Letter, and print at 100 percent with no scaling. Print in colour mode, not black and white, so all four channels are used. Let the print dry for a minute before judging it.</p>
+      </section>
+
+      <section aria-label="How to read it">
+        <h2>How to read it</h2>
+        <p>Check each bar in turn, and write down what you see. The pattern across the four bars is the diagnosis.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>What the bar shows</th><th>What it means</th><th>What to do</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Bar is blank</td><td>Channel not printing: empty cartridge, or fully clogged head</td><td>Check the cartridge level, then run a head cleaning</td></tr>
+              <tr><td>Bar is banded or streaked</td><td>Some nozzles in that channel are clogged</td><td>Run one head-cleaning cycle, then reprint</td></tr>
+              <tr><td>Bar is pale but even</td><td>Cartridge low, or a quality setting is reducing ink</td><td>Check the level and the quality setting</td></tr>
+              <tr><td>Bar is fine, but colours are still wrong</td><td>The fault is not the ink: colour management or paper profile</td><td>See the <a href="../printer-printing-wrong-colours/index.html">wrong colours</a> guide</td></tr>
+              <tr><td>All four bars are bad</td><td>A fault shared by every channel: head, feed, or paper</td><td>Clean the head, check the paper, check the feed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>One practical note: run a head cleaning once, then reprint the sheet. If the bar improves but is not clean, run it a second time. Beyond two cycles, further cleaning wastes ink without helping, and the cartridge itself becomes the more likely fault. If the bar does not improve at all after two cleanings, check the cartridge, and consider that a refilled or third-party cartridge may be failing even while it reports ink remaining.</p>
+      </section>
+
+      <section aria-label="When it is not an ink problem">
+        <h2>When it is not an ink problem</h2>
+        <p>Sometimes all four bars print perfectly and the colours are still wrong. That is useful information: it rules out the ink and the heads, and points at colour management. The usual suspects are the paper type setting in the print dialog, which changes how much ink the driver lays down; double colour management, where both the application and the driver try to correct colour at once; and the wrong paper profile, which tells the driver the paper is something it is not. The <a href="../printer-printing-wrong-colours/index.html">printer printing wrong colours</a> guide walks through each one.</p>
+        <p>The CMYK sheet is also the proof sheet after a fix. Print it before you change a cartridge or clean a head, and again afterwards. If the failing bar is healthy on the second print, the fix worked. If it is not, the fault is somewhere else, and you have not wasted a second cartridge finding out.</p>
+      </section>
+
+      <section aria-label="Composite black and the K channel">
+        <h2>Composite black and the K channel</h2>
+        <p>One thing the CMYK sheet reveals is whether your printer is making black from the black cartridge or from a mixture of colours. When the black channel is weak, many drivers quietly compensate by mixing cyan, magenta and yellow to make a composite black. The result looks black at a glance, but it is softer, slightly tinted, and it uses three cartridges to do one cartridge's job. The K bar on the CMYK sheet shows the truth: if the black bar is pale or banded while the colour bars are fine, the black channel is the fault, and the driver has been hiding it.</p>
+        <p>This matters for two reasons. First, composite black costs more: three colour cartridges draining to print black text is an expensive way to print a letter. Second, it masks the fault. A printer that prints acceptable black from mixed colours can go weeks before anyone notices the black cartridge is empty, and by then the colour cartridges are low too. Print the CMYK sheet when black text looks soft or tinted, and the K bar will tell you whether the black channel is doing its own work.</p>
+      </section>
+      <section class="related" aria-label="Related pages">
+        <h2>Related pages</h2>
+        <ul class="plain">
+        <li><a href="../colour-test-page/index.html">Colour test page</a></li>
+        <li><a href="../printer-printing-wrong-colours/index.html">Printer printing wrong colours</a></li>
+        <li><a href="../../projects/testprintpage/index.html">TestPrintPage</a></li>
+        <li><a href="../index.html">Printer help hub</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <p class="wordmark">Derek Roga</p>
+          <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
+        </div>
+        <div>
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about/index.html">About</a></li>
+            <li><a href="../../projects/index.html">Projects</a></li>
+            <li><a href="../index.html">Printer help</a></li>
+            <li><a href="../../writing/index.html">Writing</a></li>
+            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../privacy/index.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://github.com/derek-roga">GitHub</a></li>
+            <li><a href="https://dev.to/derekroga">Dev.to</a></li>
+            <li><a href="https://hashnode.com/@derekroga">Hashnode</a></li>
+            <li><a href="https://x.com/derekroga">X</a></li>
+            <li><a href="https://bsky.app/profile/derekroga01.bsky.social">Bluesky</a></li>
+            <li><a href="https://testprintpage.net">TestPrintPage</a></li>
+            <li><a href="https://derekroga.store">derekroga.store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Derek Roga &middot; Vilnius, Lithuania</p>
+        <p>Built with plain HTML and CSS. Analytics by Google Analytics 4.</p>
+        <p><a href="#top">Back to top &uarr;</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
