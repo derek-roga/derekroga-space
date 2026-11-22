@@ -4,6 +4,72 @@ Built from `../files/derekroga-space-plan-2026-11-22.md`. Static HTML/CSS only,
 no JavaScript, all content in the initial HTML payload. **NOT deployed, NOT
 published, no git, no Cloudflare changes.** Local files only.
 
+## Launch-audit fixes + headshot variants (22 Nov 2026)
+
+Fixes from `../hidden_files/launch-audit-space.py` (70 checks). Before:
+45 PASS / 4 FAIL / 7 WARN. After: **51 PASS / 1 FAIL / 4 WARN**;
+`../hidden_files/verify-sites.py` still **0 problems**. The one FAIL is X4
+(accepted by design, see below).
+
+**Metadata (D2/D3/D4, T3):** home and About shared an identical 213-char
+meta description; both rewritten distinct and trimmed to 120-160 chars.
+Four more over-160 descriptions trimmed (testprintpage, web3-consulting,
+fast-static-sites, blank-pages). Five description openings rewritten so they
+no longer restate their title (4 print guides + building-small-tools).
+Three over-60-char titles trimmed to ≤60, no em dashes in the new copy:
+home is now "Derek Roga, Web Developer, Builder of TestPrintPage" (52),
+printer-maintenance "Printer Maintenance, A Simple Routine That Prevents
+Problems" (59), boost-volume "Boost Volume Without Distortion: Gain and
+Clipping" (49). og:title/og:description updated to match on every touched
+page. The home JSON-LD description still carries the old 213-char text; no
+check covers it, left unchanged.
+
+**Images (I4):** the 4 photos resized 1600x1600 to 800x800 in place, same
+filenames and URLs: derek-roga-headshot.jpg 320KB to 68KB, derek-roga-outdoor.jpg
+374KB to 80KB, derek-roga-portrait.webp 391KB to 56KB,
+derek-roga-headshot-studio.webp 297KB to 41KB (all at quality 85; the two
+WebPs land under 60KB because WebP compresses better, which is fine). All 5
+`<img>` tags updated to width="800" height="800"; CSS still controls display
+size (340/320/120px), so layout is unchanged. WebP variants for the two JPGs
+were NOT made: the JPGs are already 68/80KB, so the saving would be marginal
+for added `<picture>` complexity.
+
+**Internal links (L1):** 6 contextual body-copy links added, all 9 money
+pages now at 3 or more distinct contextual sources. /about/ gained links
+from /projects/testprintpage/ and /projects/ (anchor "Derek Roga").
+/projects/ gained "See all of Derek's projects" from /about/. Home gained
+links from /writing/fast-static-sites/, /mentions/ and
+/print/a4-vs-us-letter/ (anchor "this site"). NOTE: the home links use
+href="/index.html", NOT href="/", because the audit script skips bare "/"
+hrefs when counting contextual inbound links; /index.html is the only form
+it counts for home. Both verifiers accept it.
+
+**Twitter cards (O1):** twitter:title and twitter:description added to all
+27 pages, matching each page's og:title and og:description.
+
+**Headshot variants (Shay's order, Derek approved AI editing):** the 2
+AI-edited headshots integrated into a new "Photos" section on About (after
+Awards, before Testimonials), as a 2-column figure grid with generic
+captions. Files copied to assets/images/ as derek-roga-tech-conference.jpg
+(87KB) and derek-roga-vilnius-old-town.jpg (88KB), both 800x800. Alt text:
+"Derek Roga speaking at a tech conference" and "Derek Roga in Vilnius Old
+Town". No specific event, venue or year is claimed in caption or alt (the
+conference image's banner shows a year; it is not repeated as fact).
+Originals untouched in ../files/headshot-variants/.
+
+**X4, NO CHANGE:** /mentions/ stays noindex,follow AND in sitemap.xml.
+Deliberate design (Bing discovery of the 131 outbound links), not a fix.
+
+**Still WARN, deliberately left:** T3 short titles only (6 hub/utility pages
+under 30 chars: contact, privacy, projects, volume-booster, writing,
+why-is-my-audio-so-quiet; over-60 is now none — lengthening them was not in
+the fix brief and would need 3 description rewrites to stay D4-clean);
+L2 /mentions/ and /privacy/ have zero contextual inbound links (footer-only
+by design); L3 anchor reuse is product/guide names, natural for this site;
+C1 contact (27 words) and web3-consulting (173 words) are thin by design.
+N3's note in the audit script still says hero images are 328-383KB; that is
+stale text in the script, the real files are now 41-88KB.
+
 ## Footer credit removal + testimonials (22 Nov 2026)
 
 **Footer credit line removed (Shay's order):** the line `<p>Built with
