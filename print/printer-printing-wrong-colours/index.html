@@ -18,12 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="icon" href="../../favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
-  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#2440F5">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
@@ -33,27 +33,26 @@
     gtag('js', new Date());
     gtag('config', 'G-0S52G28149');
   </script>
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body id="top">
   <header class="site-header">
     <div class="wrap">
-      <a class="site-name" href="../../index.html"><img class="site-logo" src="../../assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
+      <a class="site-name" href="/"><img class="site-logo" src="/assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../../about/index.html">About</a></li>
-          <li><a href="../../projects/index.html">Projects</a></li>
-          <li><a href="../index.html" aria-current="page">Print</a></li>
-          <li><a href="../../writing/index.html">Writing</a></li>
-          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/print/" aria-current="page">Print</a></li>
+          <li><a href="/writing/">Writing</a></li>
+          <li><a href="/contact/">Contact</a></li>
           <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Print</a> &rsaquo; <span aria-current="page">Wrong Colours</span>
+    <a href="/">Home</a> &rsaquo; <a href="/print/">Print</a> &rsaquo; <span aria-current="page">Wrong Colours</span>
   </nav>
   <main>
     <div class="wrap-narrow">
@@ -68,14 +67,14 @@
         <h3>Colour cast</h3>
         <p>Everything is tinted in one direction: all the whites look pink, or all the photos look green, or everything has a blue chill. The colours are present but shifted. A cast usually means colour management, not ink: the driver or the application is correcting colour in a way that does not match the paper or the printer.</p>
         <h3>Missing colour</h3>
-        <p>One colour is gone entirely. Reds print yellow because the magenta is missing. Greens print blue because the yellow is missing. Skin tones go grey or green. A missing colour means one ink channel is not printing, and the <a href="../cmyk-test-page/index.html">CMYK sheet</a> will name it in one print.</p>
+        <p>One colour is gone entirely. Reds print yellow because the magenta is missing. Greens print blue because the yellow is missing. Skin tones go grey or green. A missing colour means one ink channel is not printing, and the <a href="/print/cmyk-test-page/">CMYK sheet</a> will name it in one print.</p>
         <h3>Swapped or muddy colours</h3>
         <p>Colours are present but wrong in a confused way: browns where reds should be, muddy greens, colours that look dirty. This usually means the channels are mixing, because a head is clogged and ink is cross-contaminating, or because a cartridge is leaking into a neighbouring channel. It can also mean the wrong paper profile is telling the driver the paper is something it is not.</p>
       </section>
 
       <section aria-label="Isolate with the CMYK sheet">
         <h2>Isolate with the CMYK sheet</h2>
-        <p>The central diagnostic step is the <a href="../cmyk-test-page/index.html">CMYK test page</a>. Print it from <a href="https://testprintpage.net">TestPrintPage</a> before changing anything. It prints each ink channel on its own: cyan, magenta, yellow and black, each in a separate bar.</p>
+        <p>The central diagnostic step is the <a href="/print/cmyk-test-page/">CMYK test page</a>. Print it from <a href="https://testprintpage.net">TestPrintPage</a> before changing anything. It prints each ink channel on its own: cyan, magenta, yellow and black, each in a separate bar.</p>
         <ul class="features">
           <li><strong>One bar is blank or banded.</strong> That channel is the fault. Clean the head once, reprint, and if the bar does not recover, check that cartridge.</li>
           <li><strong>All four bars are clean.</strong> The ink and the heads are fine. The fault is colour management, the paper type setting, or the paper profile. Skip the cleaning cycles and go to the colour-management causes below.</li>
@@ -105,16 +104,16 @@
           <li><strong>If one channel is failing:</strong> clean the head once, reprint, and replace the cartridge if the bar does not recover.</li>
           <li><strong>If all channels are clean:</strong> check the paper type setting, then check that only one colour manager is active.</li>
           <li><strong>If the fault followed a cartridge change:</strong> suspect the cartridge, and test with a different one.</li>
-          <li><strong>Prove the fix:</strong> print the <a href="../colour-test-page/index.html">Colour sheet</a> and compare it with the print from before the fix.</li>
+          <li><strong>Prove the fix:</strong> print the <a href="/print/colour-test-page/">Colour sheet</a> and compare it with the print from before the fix.</li>
         </ol>
       </section>
       <section class="related" aria-label="Related pages">
         <h2>Related pages</h2>
         <ul class="plain">
-        <li><a href="../cmyk-test-page/index.html">the CMYK test sheet</a></li>
-        <li><a href="../colour-test-page/index.html">Colour test page</a></li>
-        <li><a href="../../projects/testprintpage/index.html">the printer test page utility</a></li>
-        <li><a href="../index.html">the print section</a></li>
+        <li><a href="/print/cmyk-test-page/">the CMYK test sheet</a></li>
+        <li><a href="/print/colour-test-page/">Colour test page</a></li>
+        <li><a href="/projects/testprintpage/">the printer test page utility</a></li>
+        <li><a href="/print/">the print section</a></li>
         </ul>
       </section>
     </div>
@@ -123,20 +122,20 @@
     <div class="wrap">
       <div class="footer-top">
         <div>
-          <p class="wordmark"><img class="footer-mark" src="../../assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
+          <p class="wordmark"><img class="footer-mark" src="/assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
           <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
         </div>
         <div>
           <h3>Site</h3>
           <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../about/index.html">About</a></li>
-            <li><a href="../../projects/index.html">Projects</a></li>
-            <li><a href="../index.html">Printer help</a></li>
-            <li><a href="../../writing/index.html">Writing</a></li>
-            <li><a href="../../contact/index.html">Contact</a></li>
-            <li><a href="../../privacy/index.html">Privacy</a></li>
-            <li><a href="../../mentions/index.html">Mentions</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/print/">Printer help</a></li>
+            <li><a href="/writing/">Writing</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/mentions/">Mentions</a></li>
           </ul>
         </div>
         <div>

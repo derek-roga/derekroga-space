@@ -18,12 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="icon" href="../../favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
-  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#2440F5">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
@@ -33,34 +33,33 @@
     gtag('js', new Date());
     gtag('config', 'G-0S52G28149');
   </script>
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body id="top">
   <header class="site-header">
     <div class="wrap">
-      <a class="site-name" href="../../index.html"><img class="site-logo" src="../../assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
+      <a class="site-name" href="/"><img class="site-logo" src="/assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../../about/index.html">About</a></li>
-          <li><a href="../../projects/index.html">Projects</a></li>
-          <li><a href="../../print/index.html">Print</a></li>
-          <li><a href="../index.html" aria-current="page">Writing</a></li>
-          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/print/">Print</a></li>
+          <li><a href="/writing/" aria-current="page">Writing</a></li>
+          <li><a href="/contact/">Contact</a></li>
           <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Writing</a> &rsaquo; <span aria-current="page">Fast Static Sites</span>
+    <a href="/">Home</a> &rsaquo; <a href="/writing/">Writing</a> &rsaquo; <span aria-current="page">Fast Static Sites</span>
   </nav>
   <main>
     <div class="wrap-narrow">
       <section aria-label="Introduction">
         <p class="kicker">Writing</p>
       <h1>Fast Static Sites</h1>
-        <p class="lede">Why content should be in the payload, not behind a JavaScript shell. What fast actually means for a small site, and why <a href="../../index.html">this site</a> is built the way it is.</p>
+        <p class="lede">Why content should be in the payload, not behind a JavaScript shell. What fast actually means for a small site, and why <a href="/index.html">this site</a> is built the way it is.</p>
       </section>
       <section aria-label="The problem">
         <h2>The problem: shells that search engines and slow connections struggle with</h2>
@@ -90,7 +89,7 @@
 
       <section aria-label="This site as the worked example">
         <h2>This site as the worked example</h2>
-        <p>This site is a static site. Every page is an HTML file with its content written out in full. One shared stylesheet handles the design. No JavaScript renders the content: the only script on the site is the analytics snippet, which loads after the page and is not needed to read it. What the analytics snippet collects, and what it does not, is set out on the <a href="../../privacy/index.html">Privacy page</a>. There is no framework, no build-time data fetching, and no server-side rendering. The navigation is plain links. The footer is plain HTML. The diagrams on the printer guides are inline SVG, part of the page, not fetched separately.</p>
+        <p>This site is a static site. Every page is an HTML file with its content written out in full. One shared stylesheet handles the design. No JavaScript renders the content: the only script on the site is the analytics snippet, which loads after the page and is not needed to read it. What the analytics snippet collects, and what it does not, is set out on the <a href="/privacy/">Privacy page</a>. There is no framework, no build-time data fetching, and no server-side rendering. The navigation is plain links. The footer is plain HTML. The diagrams on the printer guides are inline SVG, part of the page, not fetched separately.</p>
         <p>That is a deliberate choice, and it is the same choice behind the print guides. A test page has to be trustworthy, and a web page has to be readable. Both are served by putting the content in the payload and getting out of the way. The design system for this site, Space Grotesk for headings, Inter for body, JetBrains Mono for labels, warm paper background, one signal blue, is carried by a single stylesheet, and the whole site works if that stylesheet fails to load, because the HTML is readable on its own.</p>
         <p>The result is a site that loads in one round trip, renders immediately, works in every crawler, and can be hosted anywhere that serves files. It is not impressive technology. It is the absence of technology, and that is the point.</p>
       </section>
@@ -99,14 +98,14 @@
         <h2>When static is the wrong choice</h2>
         <p>Static is not always the answer, and it is worth saying when it is not. If the content changes per visitor, a logged-in dashboard, a personalised feed, a shopping cart, a static site cannot do it without a backend, and pretending otherwise means bolting on JavaScript until the static site is a shell site with extra steps. If the content updates many times a day from many authors, a static build step can become a bottleneck. If the site needs real-time data, a live feed or a collaborative editor, static files are the wrong tool.</p>
         <p>The question is not "static or dynamic". The question is "does this content change per visitor or per minute". If the answer is no, static is the simplest thing that works, and the simplest thing that works is usually the fastest, the most reliable, and the easiest to maintain. For a personal hub, a product site, and a set of guides, the answer is no, and static is the right choice.</p>
-        <p>Related reading on this site: <a href="../print-css/index.html">the print CSS essay</a>, on making web pages print cleanly, and <a href="../building-small-tools/index.html">the essay on building small tools</a>, on the one-job philosophy behind the products.</p>
+        <p>Related reading on this site: <a href="/writing/print-css/">the print CSS essay</a>, on making web pages print cleanly, and <a href="/writing/building-small-tools/">the essay on building small tools</a>, on the one-job philosophy behind the products.</p>
       </section>
       <section class="related" aria-label="Related pages">
         <h2>Related pages</h2>
         <ul class="plain">
-        <li><a href="../print-css/index.html">making pages print cleanly</a></li>
-        <li><a href="../../projects/testprintpage/index.html">the free test page tool</a></li>
-        <li><a href="../index.html">Writing</a></li>
+        <li><a href="/writing/print-css/">making pages print cleanly</a></li>
+        <li><a href="/projects/testprintpage/">the free test page tool</a></li>
+        <li><a href="/writing/">Writing</a></li>
         </ul>
       </section>
     </div>
@@ -115,20 +114,20 @@
     <div class="wrap">
       <div class="footer-top">
         <div>
-          <p class="wordmark"><img class="footer-mark" src="../../assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
+          <p class="wordmark"><img class="footer-mark" src="/assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
           <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
         </div>
         <div>
           <h3>Site</h3>
           <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../about/index.html">About</a></li>
-            <li><a href="../../projects/index.html">Projects</a></li>
-            <li><a href="../../print/index.html">Printer help</a></li>
-            <li><a href="../index.html">Writing</a></li>
-            <li><a href="../../contact/index.html">Contact</a></li>
-            <li><a href="../../privacy/index.html">Privacy</a></li>
-            <li><a href="../../mentions/index.html">Mentions</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/print/">Printer help</a></li>
+            <li><a href="/writing/">Writing</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/mentions/">Mentions</a></li>
           </ul>
         </div>
         <div>

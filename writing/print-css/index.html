@@ -18,12 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="icon" href="../../favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
-  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#2440F5">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
@@ -33,27 +33,26 @@
     gtag('js', new Date());
     gtag('config', 'G-0S52G28149');
   </script>
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body id="top">
   <header class="site-header">
     <div class="wrap">
-      <a class="site-name" href="../../index.html"><img class="site-logo" src="../../assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
+      <a class="site-name" href="/"><img class="site-logo" src="/assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../../about/index.html">About</a></li>
-          <li><a href="../../projects/index.html">Projects</a></li>
-          <li><a href="../../print/index.html">Print</a></li>
-          <li><a href="../index.html" aria-current="page">Writing</a></li>
-          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/print/">Print</a></li>
+          <li><a href="/writing/" aria-current="page">Writing</a></li>
+          <li><a href="/contact/">Contact</a></li>
           <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Writing</a> &rsaquo; <span aria-current="page">Print CSS</span>
+    <a href="/">Home</a> &rsaquo; <a href="/writing/">Writing</a> &rsaquo; <span aria-current="page">Print CSS</span>
   </nav>
   <main>
     <div class="wrap-narrow">
@@ -85,7 +84,7 @@
 
       <section aria-label="Page size and margins">
         <h2><code>@page</code> size and margins</h2>
-        <p>The <code>@page</code> rule controls the printed page itself: its size and its margins. This is where A4 and US Letter enter the picture, and where the <a href="../../print/a4-vs-us-letter/index.html">A4 vs US Letter guide</a> becomes practical rather than theoretical.</p>
+        <p>The <code>@page</code> rule controls the printed page itself: its size and its margins. This is where A4 and US Letter enter the picture, and where the <a href="/print/a4-vs-us-letter/">A4 vs US Letter guide</a> becomes practical rather than theoretical.</p>
 <pre><code>@page {
   size: A4;
   margin: 20mm 15mm;
@@ -119,7 +118,7 @@
         <h2>Exact-size output for PDFs</h2>
         <p>The hardest print CSS problem is exact-size output: a page that must print at a precise physical size, with elements at precise positions. A test page is the extreme case. Its alignment grid, its colour blocks and its text sizes are all placed at exact millimetre positions, and if the print is scaled by even a few percent, the sheet stops measuring what it claims to measure.</p>
         <p>The rules for exact-size output are strict. Set the <code>@page</code> size to match the paper exactly. Set margins explicitly, and account for the printer's unprintable margin. Use millimetres or points for sizes, not pixels, because pixels have no fixed physical size. And tell the reader to print at 100 percent, with no scaling, because no CSS can stop a print dialog from scaling the page if the reader asks it to.</p>
-        <p>This is the craft behind <a href="../../projects/testprintpage/index.html">the tool</a>'s output: exact-size PDFs in A4 and US Letter, designed so that what you print is what was designed. The PDFs are the reliable route, because a PDF carries its page size with it, and the print dialog can be told to print it at actual size. A web page printed from the browser is always at the mercy of the browser's print settings, which is why the sheets are PDFs, not web pages.</p>
+        <p>This is the craft behind <a href="/projects/testprintpage/">the tool</a>'s output: exact-size PDFs in A4 and US Letter, designed so that what you print is what was designed. The PDFs are the reliable route, because a PDF carries its page size with it, and the print dialog can be told to print it at actual size. A web page printed from the browser is always at the mercy of the browser's print settings, which is why the sheets are PDFs, not web pages.</p>
       </section>
 
       <section aria-label="Testing without wasting paper">
@@ -127,15 +126,15 @@
         <p>You do not need to print a hundred test pages to get print CSS right. The browser's print preview shows exactly what the printer will produce, including the page breaks, the margins, and the hidden elements. Use it as the primary test: make a change, open print preview, look at it, repeat. Print preview is fast, free, and honest.</p>
         <p>For a second check, save as PDF from the print dialog. The PDF shows the same layout, and it can be inspected at any zoom level, which is useful for checking fine details like small text and thin lines. It also shows whether the page size is right: a PDF saved from an A4 layout should be an A4 PDF, and a Letter layout should be a Letter PDF. If the PDF is the wrong size, the <code>@page</code> rule is wrong.</p>
         <p>Print one real page at the end, on the paper you intend to use, to check the things a screen cannot show: how the ink sits on the paper, whether the colours are right, and whether the margins are comfortable. One real print is worth a dozen previews for those questions. But the previews should come first, because they catch the structural problems, the missing content, the wrong page breaks, the elements that should be hidden, before any paper is wasted.</p>
-        <p>Related reading on this site: the <a href="../../print/index.html">printer help hub</a> for the guides that use exact-size output, the <a href="../../print/a4-vs-us-letter/index.html">guide to A4 and US Letter</a> for the paper-size problem, and <a href="../fast-static-sites/index.html">Fast Static Sites</a> for why this site puts its content in the payload.</p>
+        <p>Related reading on this site: the <a href="/print/">printer help hub</a> for the guides that use exact-size output, the <a href="/print/a4-vs-us-letter/">guide to A4 and US Letter</a> for the paper-size problem, and <a href="/writing/fast-static-sites/">Fast Static Sites</a> for why this site puts its content in the payload.</p>
       </section>
       <section class="related" aria-label="Related pages">
         <h2>Related pages</h2>
         <ul class="plain">
-        <li><a href="../../print/index.html">Printer help hub</a></li>
-        <li><a href="../../print/a4-vs-us-letter/index.html">A4 vs US Letter</a></li>
-        <li><a href="../fast-static-sites/index.html">the fast static sites essay</a></li>
-        <li><a href="../index.html">Writing</a></li>
+        <li><a href="/print/">Printer help hub</a></li>
+        <li><a href="/print/a4-vs-us-letter/">A4 vs US Letter</a></li>
+        <li><a href="/writing/fast-static-sites/">the fast static sites essay</a></li>
+        <li><a href="/writing/">Writing</a></li>
         </ul>
       </section>
     </div>
@@ -144,20 +143,20 @@
     <div class="wrap">
       <div class="footer-top">
         <div>
-          <p class="wordmark"><img class="footer-mark" src="../../assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
+          <p class="wordmark"><img class="footer-mark" src="/assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
           <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
         </div>
         <div>
           <h3>Site</h3>
           <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../about/index.html">About</a></li>
-            <li><a href="../../projects/index.html">Projects</a></li>
-            <li><a href="../../print/index.html">Printer help</a></li>
-            <li><a href="../index.html">Writing</a></li>
-            <li><a href="../../contact/index.html">Contact</a></li>
-            <li><a href="../../privacy/index.html">Privacy</a></li>
-            <li><a href="../../mentions/index.html">Mentions</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/print/">Printer help</a></li>
+            <li><a href="/writing/">Writing</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/mentions/">Mentions</a></li>
           </ul>
         </div>
         <div>

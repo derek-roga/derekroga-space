@@ -18,12 +18,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/style.css">
-  <link rel="icon" href="../../favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
-  <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#2440F5">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S52G28149"></script>
@@ -33,27 +33,26 @@
     gtag('js', new Date());
     gtag('config', 'G-0S52G28149');
   </script>
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body id="top">
   <header class="site-header">
     <div class="wrap">
-      <a class="site-name" href="../../index.html"><img class="site-logo" src="../../assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
+      <a class="site-name" href="/"><img class="site-logo" src="/assets/images/logo.svg" alt="Derek Roga" width="286" height="40"></a>
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../../about/index.html">About</a></li>
-          <li><a href="../../projects/index.html">Projects</a></li>
-          <li><a href="../../print/index.html">Print</a></li>
-          <li><a href="../index.html" aria-current="page">Writing</a></li>
-          <li><a href="../../contact/index.html">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/print/">Print</a></li>
+          <li><a href="/writing/" aria-current="page">Writing</a></li>
+          <li><a href="/contact/">Contact</a></li>
           <li><a class="cross-link" href="https://derekroga.store">derekroga.store ↗</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-    <a href="../../index.html">Home</a> &rsaquo; <a href="../index.html">Writing</a> &rsaquo; <span aria-current="page">Why Is My Audio So Quiet?</span>
+    <a href="/">Home</a> &rsaquo; <a href="/writing/">Writing</a> &rsaquo; <span aria-current="page">Why Is My Audio So Quiet?</span>
   </nav>
   <main>
     <div class="wrap-narrow">
@@ -87,14 +86,14 @@
         <h3>The app volume is low</h3>
         <p>Most players, call software and games have their own volume slider, and many remember it between sessions. A slider left low in one session stays low in the next. The fix: open the app's own settings or player controls and check its volume. In call software, check both the playback volume and the input level of the other side, because a quiet caller is not a fault on your end. In games, check the master volume and the individual sliders for music, effects and dialogue, which are often set separately.</p>
         <h3>The source is quiet</h3>
-        <p>If every link in the chain is at full and the audio is still quiet, the source itself is quiet. Some recordings are made at a low level. Some video files have dialogue mixed far below the music. Some streams are quieter than others. The fix is different from the checks above, because there is no setting to turn up: the audio needs to be raised, which is the subject of the companion post, <a href="../boost-volume-without-distortion/index.html">Boost Volume Without Distortion</a>. Before going there, test with a different source. If a different recording plays at normal volume, the first recording is the problem, not your setup.</p>
+        <p>If every link in the chain is at full and the audio is still quiet, the source itself is quiet. Some recordings are made at a low level. Some video files have dialogue mixed far below the music. Some streams are quieter than others. The fix is different from the checks above, because there is no setting to turn up: the audio needs to be raised, which is the subject of the companion post, <a href="/writing/boost-volume-without-distortion/">Boost Volume Without Distortion</a>. Before going there, test with a different source. If a different recording plays at normal volume, the first recording is the problem, not your setup.</p>
         <h3>An enhancement is making it quieter</h3>
         <p>Some systems and apps apply loudness normalisation, night mode, or dialogue enhancement, and some of these make audio quieter rather than louder. Loudness normalisation turns loud recordings down to match a target level, which is fine until it turns an already-quiet recording down further. Night mode compresses the dynamic range and can make quiet passages harder to hear. The fix: check the sound settings for enhancements, normalisation, or spatial audio, and turn them off one at a time to see if the volume comes back. If it does, leave the culprit off.</p>
       </section>
 
       <section aria-label="When the recording itself is quiet">
         <h2>When the recording itself is quiet</h2>
-        <p>A quiet recording is a different problem from a quiet chain, and it needs a different fix. Turning up the volume on a quiet recording raises the noise floor along with the signal, so the result is louder and hissier, not cleaner. The proper fix is to raise the level of the recording itself, carefully, without clipping: normalise it, or raise the gain in stages and check for distortion at each step. That is a how-to in its own right, and it is covered in <a href="../boost-volume-without-distortion/index.html">the distortion-free volume guide</a>, which explains gain staging, normalisation and compression in plain language, and when boosting cannot help at all.</p>
+        <p>A quiet recording is a different problem from a quiet chain, and it needs a different fix. Turning up the volume on a quiet recording raises the noise floor along with the signal, so the result is louder and hissier, not cleaner. The proper fix is to raise the level of the recording itself, carefully, without clipping: normalise it, or raise the gain in stages and check for distortion at each step. That is a how-to in its own right, and it is covered in <a href="/writing/boost-volume-without-distortion/">the distortion-free volume guide</a>, which explains gain staging, normalisation and compression in plain language, and when boosting cannot help at all.</p>
         <p>One quick test before you go there: play the same recording on a different device, a phone or another computer. If it is quiet there too, the recording is the problem. If it plays fine on the other device, something in the first device's chain is still turned down, and the ladder above will find it.</p>
       </section>
 
@@ -107,14 +106,14 @@
 
       <section aria-label="About this guide">
         <h2>About this guide</h2>
-        <p>This is general audio advice, written from the same symptom-first approach as the printer guides on this site. It sits alongside <a href="../../projects/volume-booster/index.html">Derek's second product</a>, which follows the same one-job rule as TestPrintPage. The guide makes no claims about that product. It is here because quiet audio is a common problem with a short list of causes, and the list is worth writing down.</p>
+        <p>This is general audio advice, written from the same symptom-first approach as the printer guides on this site. It sits alongside <a href="/projects/volume-booster/">Derek's second product</a>, which follows the same one-job rule as TestPrintPage. The guide makes no claims about that product. It is here because quiet audio is a common problem with a short list of causes, and the list is worth writing down.</p>
       </section>
       <section class="related" aria-label="Related pages">
         <h2>Related pages</h2>
         <ul class="plain">
-        <li><a href="../boost-volume-without-distortion/index.html">the gain staging guide</a></li>
-        <li><a href="../../projects/volume-booster/index.html">the Volume Booster project</a></li>
-        <li><a href="../index.html">more writing</a></li>
+        <li><a href="/writing/boost-volume-without-distortion/">the gain staging guide</a></li>
+        <li><a href="/projects/volume-booster/">the Volume Booster project</a></li>
+        <li><a href="/writing/">more writing</a></li>
         </ul>
       </section>
     </div>
@@ -123,20 +122,20 @@
     <div class="wrap">
       <div class="footer-top">
         <div>
-          <p class="wordmark"><img class="footer-mark" src="../../assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
+          <p class="wordmark"><img class="footer-mark" src="/assets/images/logo-mark.svg" alt="" width="32" height="32">Derek Roga</p>
           <p class="footer-pitch">Web developer in Vilnius, Lithuania. Builder of TestPrintPage and Volume Booster. Founder of Essence Technologies.</p>
         </div>
         <div>
           <h3>Site</h3>
           <ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../about/index.html">About</a></li>
-            <li><a href="../../projects/index.html">Projects</a></li>
-            <li><a href="../../print/index.html">Printer help</a></li>
-            <li><a href="../index.html">Writing</a></li>
-            <li><a href="../../contact/index.html">Contact</a></li>
-            <li><a href="../../privacy/index.html">Privacy</a></li>
-            <li><a href="../../mentions/index.html">Mentions</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/projects/">Projects</a></li>
+            <li><a href="/print/">Printer help</a></li>
+            <li><a href="/writing/">Writing</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/mentions/">Mentions</a></li>
           </ul>
         </div>
         <div>
