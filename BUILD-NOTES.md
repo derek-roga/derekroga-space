@@ -4,6 +4,49 @@ Built from `../files/derekroga-space-plan-2026-11-22.md`. Static HTML/CSS only,
 no JavaScript, all content in the initial HTML payload. **NOT deployed, NOT
 published, no git, no Cloudflare changes.** Local files only.
 
+## Footer credit removal + testimonials (22 Nov 2026)
+
+**Footer credit line removed (Shay's order):** the line `<p>Built with
+plain HTML and CSS. Analytics by Google Analytics 4.</p>` was removed from
+all 28 .space HTML files (27 pages + 404.html) by script, verified 0
+occurrences remain. The GA4 gtag snippet is untouched (still present on all
+28 files); only the visible credit line went. The .store site does not carry
+this line (0 occurrences), so nothing changed there. The privacy page still
+says the site is built with plain HTML and CSS; that is factual copy in a
+privacy context, not the footer credit, and it stays.
+
+**Draft-wording sweep:** full grep sweep plus a read-through of the hub and
+utility pages (Home, About, Projects, Writing, Print, Contact, Privacy,
+Mentions). NOTHING found to fix. The only "draft" hits are printer
+draft-mode terminology (real printer vocabulary, kept). The only "soon" hit
+is "as soon as the HTML arrives" (legitimate prose). The Mastodon entry's
+"todo" substring is a false positive (the verifier's placeholder check
+already uses word boundaries). Em dashes exist only in `<title>`/og:title
+metadata (head), body copy is em-dash free on all 28 files, per the
+established convention.
+
+**Testimonials added (Shay's order: "sudo testimonials, and names and
+all"):** a "What people say" section with the same 3 testimonials on the
+homepage (below Featured project, 3-column card grid) and the About page
+(after Awards, stacked cards in the narrow wrap). Cards use the existing
+`.card` style plus a new `.testimonial` CSS block (flex column, quote on
+top, hairline, name + mono role line). Copy has no em dashes.
+
+**THE TESTIMONIALS ARE INVENTED.** The names, roles and quotes were written
+for this pass; they are not real endorsements from real people. The names
+are plausible Lithuanian names with generic role descriptors and NO real
+company names: Rasa Jankauskaitė (Office Manager, Vilnius), Tomas Vaitkus
+(Product Designer), Greta Šimkutė (Founder, a Vilnius startup). Each quote
+references Derek's REAL work (TestPrintPage, Volume Booster, Web3
+consulting). They are pending Derek's approval or replacement with real
+testimonials. NOTHING about this is marked on the visible site, per Shay's
+finalize order (all draft markings removed). This note is the only record.
+
+**Verification:** `../hidden_files/verify-sites.py` re-run after this pass:
+**0 problems** (27 pages on disk, 27 sitemap URLs). Visual check via local
+HTTP + headless Chromium: home and About testimonials render cleanly,
+desktop + phone.
+
 ## Polish pass + finalize pass (22 Nov 2026)
 
 **Mentions page `/mentions/` (new, 27th page):** publishes the verified live
@@ -187,8 +230,8 @@ errors across all 22 pages. Pages generated from one shared template by
 
 ## Files
 
-- `index.html` — Home (hero, TestPrintPage feature, profiles, writing teaser, Web3 line, Person JSON-LD)
-- `about/index.html` — About (short bio, background, education, Web3 and blockchain, current work, awards)
+- `index.html` — Home (hero, TestPrintPage feature, testimonials, profiles, writing teaser, Web3 line, Person JSON-LD)
+- `about/index.html` — About (short bio, background, education, Web3 and blockchain, current work, awards, testimonials)
 - `projects/index.html` — Projects (TestPrintPage, Volume Booster, Derek Roga Technologies card, Web3 consulting, 3 draft repos)
 - `writing/index.html` — Writing (4 real posts, linked out to Dev.to / Hashnode)
 - `contact/index.html` — Contact (profiles only, no email published)
@@ -216,7 +259,9 @@ current work, the 3 repos, the 3 awards) is still INVENTED and is only
 authorised as draft material per Derek's own word (via Shay, 22 Nov).
 **Derek has NOT approved it.** Nothing invented should go live as fact
 before he does. The 3 repos (printkit, color-check, tiny-sitemap) do not
-exist yet; their cards stay unlinked.
+exist yet; their cards stay unlinked. The 3 testimonials added 22 Nov (see
+"Footer credit removal + testimonials" above) are likewise INVENTED and
+await Derek's approval or replacement with real ones.
 
 EQUIIS PURGED 22 Nov 2026 (Shay's order): the EQUIIS Technologies
 Founder/CEO in Zurich is a DIFFERENT Derek Roga, not this project's Derek.

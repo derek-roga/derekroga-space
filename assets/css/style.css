@@ -606,3 +606,25 @@ pre code { background: transparent; padding: 0; color: inherit; }
 .mention-desc { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.95rem; }
 .mention-second { font-size: 0.875rem; margin-left: 0.75rem; }
 .mention-count { font-family: var(--font-mono); font-size: 0.875rem; font-weight: 400; color: var(--muted); }
+
+/* ---------- testimonials ---------- */
+
+.testimonial { display: flex; flex-direction: column; margin-bottom: 0; }
+.testimonial blockquote { margin: 0 0 1.25rem; flex: 1; }
+.testimonial blockquote p { margin: 0; font-size: 1rem; }
+.testimonial figcaption {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: auto;
+}
+.testimonial figcaption strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.testimonial figcaption span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
