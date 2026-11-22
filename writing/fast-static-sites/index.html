@@ -90,7 +90,7 @@
 
       <section aria-label="This site as the worked example">
         <h2>This site as the worked example</h2>
-        <p>This site is a static site. Every page is an HTML file with its content written out in full. One shared stylesheet handles the design. No JavaScript renders the content: the only script on the site is the analytics snippet, which loads after the page and is not needed to read it. There is no framework, no build-time data fetching, and no server-side rendering. The navigation is plain links. The footer is plain HTML. The diagrams on the printer guides are inline SVG, part of the page, not fetched separately.</p>
+        <p>This site is a static site. Every page is an HTML file with its content written out in full. One shared stylesheet handles the design. No JavaScript renders the content: the only script on the site is the analytics snippet, which loads after the page and is not needed to read it. What the analytics snippet collects, and what it does not, is set out on the <a href="../../privacy/index.html">Privacy page</a>. There is no framework, no build-time data fetching, and no server-side rendering. The navigation is plain links. The footer is plain HTML. The diagrams on the printer guides are inline SVG, part of the page, not fetched separately.</p>
         <p>That is a deliberate choice, and it is the same choice behind the print guides. A test page has to be trustworthy, and a web page has to be readable. Both are served by putting the content in the payload and getting out of the way. The design system for this site, Space Grotesk for headings, Inter for body, JetBrains Mono for labels, warm paper background, one signal blue, is carried by a single stylesheet, and the whole site works if that stylesheet fails to load, because the HTML is readable on its own.</p>
         <p>The result is a site that loads in one round trip, renders immediately, works in every crawler, and can be hosted anywhere that serves files. It is not impressive technology. It is the absence of technology, and that is the point.</p>
       </section>
@@ -99,13 +99,13 @@
         <h2>When static is the wrong choice</h2>
         <p>Static is not always the answer, and it is worth saying when it is not. If the content changes per visitor, a logged-in dashboard, a personalised feed, a shopping cart, a static site cannot do it without a backend, and pretending otherwise means bolting on JavaScript until the static site is a shell site with extra steps. If the content updates many times a day from many authors, a static build step can become a bottleneck. If the site needs real-time data, a live feed or a collaborative editor, static files are the wrong tool.</p>
         <p>The question is not "static or dynamic". The question is "does this content change per visitor or per minute". If the answer is no, static is the simplest thing that works, and the simplest thing that works is usually the fastest, the most reliable, and the easiest to maintain. For a personal hub, a product site, and a set of guides, the answer is no, and static is the right choice.</p>
-        <p>Related reading on this site: <a href="../print-css/index.html">Print CSS</a>, on making web pages print cleanly, and <a href="../building-small-tools/index.html">Building Small Tools</a>, on the one-job philosophy behind the products.</p>
+        <p>Related reading on this site: <a href="../print-css/index.html">the print CSS essay</a>, on making web pages print cleanly, and <a href="../building-small-tools/index.html">the essay on building small tools</a>, on the one-job philosophy behind the products.</p>
       </section>
       <section class="related" aria-label="Related pages">
         <h2>Related pages</h2>
         <ul class="plain">
-        <li><a href="../print-css/index.html">Print CSS</a></li>
-        <li><a href="../../projects/testprintpage/index.html">TestPrintPage</a></li>
+        <li><a href="../print-css/index.html">making pages print cleanly</a></li>
+        <li><a href="../../projects/testprintpage/index.html">the free test page tool</a></li>
         <li><a href="../index.html">Writing</a></li>
         </ul>
       </section>

@@ -4,6 +4,58 @@ Built from `../files/derekroga-space-plan-2026-11-22.md`. Static HTML/CSS only,
 no JavaScript, all content in the initial HTML payload. **NOT deployed, NOT
 published, no git, no Cloudflare changes.** Local files only.
 
+## Warnings pass: all 4 cleared (22 Nov 2026)
+
+Follow-up to the launch-audit fix round above. Before: 51 PASS / 1 FAIL /
+4 WARN. After: **55 PASS / 1 FAIL (X4 only, accepted by design) / 0 WARN**;
+`../hidden_files/verify-sites.py` still **0 problems**. Backup of the
+pre-pass site at `/tmp/site-space-backup-warnings-2026-11-22`. 26 of 27
+pages touched (mentions and 404 untouched).
+
+**Titles (T3):** the 6 short titles lengthened to 30-60 chars, og:title and
+twitter:title synced on each: contact "Contact Derek Roga, Web Developer
+in Vilnius" (44), privacy "Privacy Policy for derekroga.space" (34),
+projects "Projects by Derek Roga, Web Developer" (37), volume-booster
+"Volume Booster, Derek Roga's Second Product" (43), writing "Writing by
+Derek Roga on Front-End and Print" (44), why-audio "Why Is My Audio So
+Quiet? Fix the Volume Chain" (46). Descriptions on privacy, projects and
+writing rewritten in the same pass (145/133/127 chars) so D4 stays clean;
+og:description and twitter:description synced. No em dashes in the new
+copy.
+
+**Contextual inbound (L2):** /mentions/ gained body-copy links from home
+("mentions page", in the "Find Derek online" section) and About ("the
+mentions page", in "Get in touch"); /privacy/ gained links from
+fast-static-sites ("Privacy page") and contact ("Privacy page", in the
+new "Email and privacy" section). Every page now has at least 1
+contextual inbound link.
+
+**Anchor variety (L3):** 73 exact-anchor edits across 19 files, applied
+with an asserted script (each replacement required exactly 1 occurrence
+inside `<main>`, scoped to `<main>` because header nav and footer carry
+identical `<li>` strings for /writing/). The 19 over-reused anchors were
+all brought to 3 uses or fewer: "TestPrintPage" 22 to 3, "Printer help
+hub" 13 to 3, the rest (article titles, guide titles) 4-7 to 3. The most
+prominent instance of each anchor kept its exact name/title (home cards,
+hub cards, first body mention); the rest varied to natural alternatives
+("the printer test page utility", "the TestPrintPage project", "the
+printer guides", "all the printer guides", "the CMYK test sheet", "the
+small-tools essay", etc.), each new anchor used 3 times at most. No
+generic anchors introduced (L4 still PASS).
+
+**Thin pages (C1):** contact 27 to 333 words, web3-consulting 173 to 333
+words (floor 300). Contact gained three sections, guidance copy only:
+"What to write about" (feedback on TestPrintPage, the printer guides,
+Volume Booster, the essays, Web3 consulting enquiries, with a link to
+the consulting page), "Which profile to use" (GitHub for code, Dev.to
+and Hashnode for writing discussion, X and Bluesky for short messages),
+"Email and privacy" (states plainly there is no public email address and
+no contact form; the analytics/privacy line links to the Privacy page).
+Web3 consulting gained "What Web3 consulting covers": general educational
+copy on what a Web3 consultant does and what a Layer 2 / zkEVM network
+is. No new facts about Derek were invented in either expansion; every
+Derek-specific claim was already on the site.
+
 ## Launch-audit fixes + headshot variants (22 Nov 2026)
 
 Fixes from `../hidden_files/launch-audit-space.py` (70 checks). Before:
